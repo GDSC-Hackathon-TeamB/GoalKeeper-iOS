@@ -274,7 +274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mDr-a1-Zfp">
-                                <rect key="frame" x="20" y="113.00000000000003" width="393" height="373.66666666666674"/>
+                                <rect key="frame" x="20" y="113.00000000000003" width="393" height="374.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="운동중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCI-69-TPx">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="25"/>
@@ -326,16 +326,27 @@
                                             <constraint firstAttribute="height" constant="5" id="7Km-B0-Y05"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이지훈 님의 인증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpT-pO-xnz">
-                                        <rect key="frame" x="0.0" y="354.33333333333331" width="105.33333333333333" height="19.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="190" translatesAutoresizingMaskIntoConstraints="NO" id="Mus-bE-4IS">
+                                        <rect key="frame" x="0.0" y="354.33333333333331" width="354.33333333333331" height="20.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이지훈 님의 인증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpT-pO-xnz">
+                                                <rect key="frame" x="0.0" y="0.0" width="105.33333333333333" height="19.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증하기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGH-su-uxD">
+                                                <rect key="frame" x="295.33333333333331" y="0.0" width="59" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvM-Ba-1JN">
-                                <rect key="frame" x="20" y="517" width="361" height="150"/>
+                                <rect key="frame" x="20" y="518" width="361" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="LQY-ZW-PT5"/>
@@ -374,6 +385,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="B2G-QE-fb8"/>
                     <connections>
+                        <outlet property="authLabel" destination="rGH-su-uxD" id="6yj-qW-nGG"/>
                         <outlet property="registerPhoto" destination="cvM-Ba-1JN" id="rGd-Ch-CBR"/>
                     </connections>
                 </viewController>

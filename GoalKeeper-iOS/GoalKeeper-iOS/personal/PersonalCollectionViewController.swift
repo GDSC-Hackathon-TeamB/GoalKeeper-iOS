@@ -14,6 +14,9 @@ import Photos
 class PersonalCollectionViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource  {
 
     
+    @IBOutlet weak var authLabel: UILabel!
+    
+    
     @IBOutlet weak var registerPhoto: UICollectionView!
     
     var images:[UIImage] = []
@@ -25,6 +28,12 @@ class PersonalCollectionViewController: UIViewController,UICollectionViewDelegat
 
         setupCollectionViews()
 
+        
+        // UITapGestureRecognizer 추가
+               let tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        authLabel?.isUserInteractionEnabled = true
+        authLabel?.addGestureRecognizer(tapGesture3)
+           
 
     }
     
@@ -120,6 +129,17 @@ class PersonalCollectionViewController: UIViewController,UICollectionViewDelegat
             selectedIndexPaths.remove(at: index)
         }
     }
+    
+    
+    @objc func handleTap() {
+           // RewardPopUp 인스턴스화 및 설정
+           let rewardPopUpVC = RewardPopUp()
+           rewardPopUpVC.modalPresentationStyle = .overFullScreen // 풀스크린이 아닌 모달 스타일
+           rewardPopUpVC.modalTransitionStyle = .crossDissolve // 부드러운 전환 효과
+
+           // 모달로 표시
+           present(rewardPopUpVC, animated: true, completion: nil)
+       }
     
     
     
