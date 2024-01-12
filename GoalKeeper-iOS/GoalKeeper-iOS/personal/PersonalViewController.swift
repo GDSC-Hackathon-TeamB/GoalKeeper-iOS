@@ -8,22 +8,37 @@
 import UIKit
 
 class PersonalViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var goToMatchView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        goToMatchView.layer.cornerRadius = 12
     }
+ 
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+       
+       @IBAction func gotoMatch(_ sender: Any) {
+           
+                let storyboard = UIStoryboard(name: "Personal", bundle: nil)
+        
+                guard let groupAuthVC = storyboard.instantiateViewController(withIdentifier: "SelectGoalPersonalViewController") as? SelectGoalPersonalViewController else {
+        
+                    print("SelectGoalPersonalViewController를 찾을 수 없습니다.")
+                    return
+                }
+        
+                self.navigationController?.pushViewController(groupAuthVC, animated: true)
+        
+        
+        
+                print(1)
+           
+           
+       }
+       
+    
 }
