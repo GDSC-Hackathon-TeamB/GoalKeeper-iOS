@@ -28,8 +28,19 @@ class ShowMatchingTimeViewController: UIViewController {
         $0.textColor = .black
     }
     
+    let cancelMatchingButton = UIButton().then {
+        $0.backgroundColor = UIColor(red: 1, green: 0.497, blue: 0.202, alpha: 0.7)
+        $0.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+        $0.setTitle("매칭취소", for: .normal)
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+        $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .white
         
         navigationController?.navigationBar.isHidden = true
 
@@ -45,6 +56,7 @@ extension ShowMatchingTimeViewController {
         view.addSubview(label1)
         view.addSubview(label2)
         view.addSubview(time)
+        view.addSubview(cancelMatchingButton)
     }
     
     func layoutConstraints() {
@@ -61,6 +73,12 @@ extension ShowMatchingTimeViewController {
         time.snp.makeConstraints { make in
             make.centerX.equalTo(view.snp.centerX)
             make.top.equalTo(label2.snp.bottom).offset(50)
+        }
+        cancelMatchingButton.snp.makeConstraints { make in
+            make.height.equalTo(60)
+            make.horizontalEdges.equalTo(view.snp.horizontalEdges).inset(70)
+            make.centerX.equalTo(view.snp.centerX)
+            make.top.equalTo(time.snp.bottom).offset(60)
         }
     }
 }
