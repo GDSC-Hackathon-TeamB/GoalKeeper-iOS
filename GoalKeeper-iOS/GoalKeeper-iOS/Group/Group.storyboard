@@ -78,6 +78,13 @@
                                     <constraint firstAttribute="width" constant="250" id="p51-m3-5fb"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWj-95-t9f">
+                                <rect key="frame" x="0.0" y="768" width="393" height="1"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Eyc-LJ-mvi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aV0-ta-9cX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -85,6 +92,9 @@
                             <constraint firstItem="U95-L0-Rat" firstAttribute="centerX" secondItem="wa8-FE-T7J" secondAttribute="centerX" id="CPO-Em-h0b"/>
                             <constraint firstItem="tx5-kA-rds" firstAttribute="centerX" secondItem="wa8-FE-T7J" secondAttribute="centerX" id="DJn-ma-xik"/>
                             <constraint firstItem="U95-L0-Rat" firstAttribute="top" secondItem="tx5-kA-rds" secondAttribute="bottom" constant="75" id="LkP-yZ-kAY"/>
+                            <constraint firstItem="DWj-95-t9f" firstAttribute="leading" secondItem="aV0-ta-9cX" secondAttribute="leading" id="YLN-b4-dpi"/>
+                            <constraint firstItem="DWj-95-t9f" firstAttribute="bottom" secondItem="aV0-ta-9cX" secondAttribute="bottom" id="jNQ-w0-3XW"/>
+                            <constraint firstItem="aV0-ta-9cX" firstAttribute="trailing" secondItem="DWj-95-t9f" secondAttribute="trailing" id="qi2-M2-JTK"/>
                             <constraint firstItem="tx5-kA-rds" firstAttribute="top" secondItem="aV0-ta-9cX" secondAttribute="top" constant="200" id="vcb-ii-qqp"/>
                         </constraints>
                     </view>
@@ -360,12 +370,13 @@
             </objects>
             <point key="canvasLocation" x="7390" y="-37"/>
         </scene>
-        <!--Item-->
+        <!--이웃사랑-->
         <scene sceneID="ybW-MD-qKl">
             <objects>
                 <navigationController storyboardIdentifier="groupNVC" automaticallyAdjustsScrollViewInsets="NO" id="PnR-Yd-jZ9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="sfB-Gl-RW4"/>
+                    <tabBarItem key="tabBarItem" title="이웃사랑" id="sfB-Gl-RW4"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mmw-AU-5Ut">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

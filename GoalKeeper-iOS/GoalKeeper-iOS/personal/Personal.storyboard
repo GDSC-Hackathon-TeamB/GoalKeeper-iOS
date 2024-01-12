@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Bold.otf">
+            <string>Pretendard-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Personal View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -17,16 +22,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBu-Cm-DYV">
-                                <rect key="frame" x="175" y="349" width="66" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매칭중이 아니에요.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U9-U9-v9X">
+                                <rect key="frame" x="100" y="286" width="193" height="30"/>
+                                <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-SL-or8">
+                                <rect key="frame" x="71.666666666666686" y="391" width="250" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUj-Yi-t0x">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매칭하러가기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytf-27-IGG">
+                                        <rect key="frame" x="72.999999999999986" y="23" width="104.00000000000001" height="24"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fUj-Yi-t0x" secondAttribute="bottom" id="2ti-2T-iDt"/>
+                                    <constraint firstItem="Ytf-27-IGG" firstAttribute="centerY" secondItem="vdd-SL-or8" secondAttribute="centerY" id="CWc-BS-mNY"/>
+                                    <constraint firstItem="fUj-Yi-t0x" firstAttribute="top" secondItem="vdd-SL-or8" secondAttribute="top" id="DF6-Ez-HsW"/>
+                                    <constraint firstItem="fUj-Yi-t0x" firstAttribute="leading" secondItem="vdd-SL-or8" secondAttribute="leading" id="DTK-Xo-XvG"/>
+                                    <constraint firstAttribute="height" constant="70" id="RPs-i8-PKg"/>
+                                    <constraint firstAttribute="width" constant="250" id="iTE-pf-qY9"/>
+                                    <constraint firstItem="Ytf-27-IGG" firstAttribute="centerX" secondItem="vdd-SL-or8" secondAttribute="centerX" id="klh-da-JXX"/>
+                                    <constraint firstAttribute="trailing" secondItem="fUj-Yi-t0x" secondAttribute="trailing" id="vUd-p1-fqn"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TcI-PQ-yvT">
+                                <rect key="frame" x="0.0" y="768" width="393" height="1"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="0v1-8X-rLY"/>
+                                    <constraint firstAttribute="height" constant="1" id="L5M-hZ-jcb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6U9-U9-v9X" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="54u-wI-v1F"/>
+                            <constraint firstItem="vdd-SL-or8" firstAttribute="top" secondItem="6U9-U9-v9X" secondAttribute="bottom" constant="75" id="5aJ-bC-0Bc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TcI-PQ-yvT" secondAttribute="bottom" id="Fgf-YO-fl5"/>
+                            <constraint firstItem="vdd-SL-or8" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="hLV-Za-t0f"/>
+                            <constraint firstItem="vdd-SL-or8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lSq-gr-s6I"/>
+                            <constraint firstItem="TcI-PQ-yvT" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="qak-d6-wGK"/>
+                            <constraint firstAttribute="trailing" secondItem="TcI-PQ-yvT" secondAttribute="trailing" id="uKa-lR-3PC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DtK-Y9-XCj"/>
                 </viewController>
@@ -34,17 +83,21 @@
             </objects>
             <point key="canvasLocation" x="1907.6335877862596" y="-34.507042253521128"/>
         </scene>
-        <!--Item-->
+        <!--자기계발-->
         <scene sceneID="iJJ-RD-mH8">
             <objects>
                 <navigationController storyboardIdentifier="personalNVC" automaticallyAdjustsScrollViewInsets="NO" id="w8K-kH-0Jw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Usd-qt-JaP"/>
+                    <tabBarItem key="tabBarItem" title="자기계발" id="Usd-qt-JaP"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1pZ-KO-k1C">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ekI-on-GMf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="qKR-3h-TSq"/>
                     </connections>
