@@ -5,6 +5,8 @@
 //  Created by 가은 on 1/13/24.
 //
 
+import SnapKit
+import Then
 import UIKit
 
 class UserInfoViewController: UIViewController {
