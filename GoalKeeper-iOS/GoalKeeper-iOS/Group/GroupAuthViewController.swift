@@ -46,8 +46,8 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
         
         // UITapGestureRecognizer 추가
                let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-               groupAuth.isUserInteractionEnabled = true
-               groupAuth.addGestureRecognizer(tapGesture2)
+               groupAuth?.isUserInteractionEnabled = true
+               groupAuth?.addGestureRecognizer(tapGesture2)
            
     }
     
