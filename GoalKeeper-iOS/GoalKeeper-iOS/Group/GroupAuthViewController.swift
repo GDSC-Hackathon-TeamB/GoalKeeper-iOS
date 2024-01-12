@@ -29,6 +29,8 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
 
 
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionViews()
@@ -42,8 +44,13 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
                RuleLabel.addGestureRecognizer(tapGesture)
                RuleLabel.isUserInteractionEnabled = true
         
-        
+        // UITapGestureRecognizer 추가
+               let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+               groupAuth.isUserInteractionEnabled = true
+               groupAuth.addGestureRecognizer(tapGesture2)
+           
     }
+    
     
     
     //MARK: - 사진 선택
@@ -139,7 +146,7 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     
-    //MARK: -
+    //MARK: -탭 제스쳐
 
     @objc func ruleLabelTapped() {
         // Alert 컨트롤러 생성
@@ -169,7 +176,15 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
         present(alertController, animated: true, completion: nil)
     }
 
-    
+    @objc func handleTap() {
+           // RewardPopUp 인스턴스화 및 설정
+           let rewardPopUpVC = RewardPopUp()
+           rewardPopUpVC.modalPresentationStyle = .overFullScreen // 풀스크린이 아닌 모달 스타일
+           rewardPopUpVC.modalTransitionStyle = .crossDissolve // 부드러운 전환 효과
+
+           // 모달로 표시
+           present(rewardPopUpVC, animated: true, completion: nil)
+       }
     
     
 }
