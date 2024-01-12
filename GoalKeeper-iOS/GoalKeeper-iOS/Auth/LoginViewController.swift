@@ -47,6 +47,12 @@ class LoginViewController: UIViewController {
         
         addView()
         layoutConstraints()
+        
+        showPWImage.addTarget(self, action: #selector(showPW), for: .touchUpInside)
+    }
+    
+    @objc func showPW() {
+        pwTextField.isSecureTextEntry = !pwTextField.isSecureTextEntry
     }
     
 }
