@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,8 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHs-gh-8He">
+                                <rect key="frame" x="0.0" y="768" width="393" height="1"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Xau-Fq-VQk"/>
+                                    <constraint firstAttribute="height" constant="1" id="bhQ-Kg-Ycy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pHs-gh-8He" secondAttribute="trailing" id="0Fv-FC-FbG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pHs-gh-8He" secondAttribute="bottom" id="g9J-Jn-clP"/>
+                            <constraint firstItem="pHs-gh-8He" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="uun-aa-Tdj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BQ1-pp-2IB"/>
                 </viewController>
@@ -25,12 +40,13 @@
             </objects>
             <point key="canvasLocation" x="1907.6335877862596" y="-34.507042253521128"/>
         </scene>
-        <!--Item-->
+        <!--My-->
         <scene sceneID="ggO-HA-1ao">
             <objects>
                 <navigationController storyboardIdentifier="profileNVC" automaticallyAdjustsScrollViewInsets="NO" id="Cpf-Tv-G7q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QDi-b8-94e"/>
+                    <tabBarItem key="tabBarItem" title="My" id="QDi-b8-94e"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m9M-Os-6F2">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
