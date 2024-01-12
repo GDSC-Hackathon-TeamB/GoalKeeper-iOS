@@ -31,24 +31,26 @@ class ProfileViewController: UIViewController {
         $0.backgroundColor = UIColor(red: 0.954, green: 0.954, blue: 0.954, alpha: 1)
     }
     
-    lazy var badgeView = arrowView(title: "모은 배지", labelFont: UIFont.systemFont(ofSize: 20, weight: .semibold))
-    lazy var agreementView = arrowView(title: "서비스 이용동의", labelFont: UIFont.systemFont(ofSize: 20, weight: .medium))
-    lazy var privacyPolicyView = arrowView(title: "개인정보처리방침", labelFont: UIFont.systemFont(ofSize: 20, weight: .medium))
-    lazy var inquireView = arrowView(title: "문의하기", labelFont: UIFont.systemFont(ofSize: 20, weight: .medium))
+    lazy var badgeView = arrowView(title: "모은 배지", labelFont: UIFont.systemFont(ofSize: 18, weight: .semibold))
+    lazy var agreementView = arrowView(title: "서비스 이용동의", labelFont: UIFont.systemFont(ofSize: 18, weight: .medium))
+    lazy var privacyPolicyView = arrowView(title: "개인정보처리방침", labelFont: UIFont.systemFont(ofSize: 18, weight: .medium))
+    lazy var inquireView = arrowView(title: "문의하기", labelFont: UIFont.systemFont(ofSize: 18, weight: .medium))
     
     let versionLabel = UILabel().then {
         $0.text = "버전정보"
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        $0.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         $0.textColor = .black
     }
     let version = UILabel().then {
         $0.text = "1.0.0"
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        $0.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         $0.textColor = .black
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.isHidden = true
 
         addView()
         layoutConstraints()
@@ -73,13 +75,13 @@ class ProfileViewController: UIViewController {
         let safeArea = view.safeAreaLayoutGuide
         
         myLabel.snp.makeConstraints { make in
-            make.top.equalTo(safeArea.snp.top).offset(80)
+            make.top.equalTo(safeArea.snp.top).offset(50)
             make.leading.equalTo(safeArea.snp.leading).offset(25)
         }
         
         nicknameView.snp.makeConstraints { make in
             make.width.equalTo(view.snp.width).offset(-50)
-            make.top.equalTo(myLabel.snp.bottom).offset(50)
+            make.top.equalTo(myLabel.snp.bottom).offset(40)
             make.centerX.equalTo(view.snp.centerX)
         }
         
