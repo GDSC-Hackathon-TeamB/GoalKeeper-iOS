@@ -14,14 +14,20 @@ class MyBadgeViewController: UIViewController {
         $0.tintColor = .black
     }
     
+    let badgeNumLabel = UILabel().then {
+        $0.text = "총 120개 중 4개를 모았어요"
+        $0.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        $0.textColor = .black
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
         setNavigationBar()
-//        addView()
-//        layoutConstraints()
+        addView()
+        layoutConstraints()
         
         buttonActions()
         
@@ -40,5 +46,20 @@ class MyBadgeViewController: UIViewController {
     
     @objc func didClickBackButton() {
         navigationController?.popViewController(animated: true)
+    }
+}
+
+extension MyBadgeViewController {
+    func addView() {
+        view.addSubview(badgeNumLabel)
+    }
+    
+    func layoutConstraints() {
+        let safeArea = view.safeAreaLayoutGuide
+        
+        badgeNumLabel.snp.makeConstraints { make in
+            make.top.equalTo(safeArea.snp.top).offset(20)
+            make.centerX.equalTo(view.snp.centerX)
+        }
     }
 }
