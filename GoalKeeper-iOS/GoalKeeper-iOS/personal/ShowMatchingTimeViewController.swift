@@ -10,12 +10,12 @@ import Then
 import UIKit
 
 class ShowMatchingTimeViewController: UIViewController {
-    
     let label1 = UILabel().then {
         $0.text = "오후 8시에 매칭이 완료됩니다."
         $0.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         $0.textColor = .black
     }
+
     let label2 = UILabel().then {
         $0.text = "매칭 완료까지 남은 시간"
         $0.font = UIFont.systemFont(ofSize: 25, weight: .bold)
@@ -47,8 +47,37 @@ class ShowMatchingTimeViewController: UIViewController {
         addView()
         layoutConstraints()
         
+        
     }
     
+    func updateTime() {
+        let currentTime = Date()
+        
+        // Calendar 인스턴스 생성
+        let calendar = Calendar.current
+
+        // 오늘의 오후 8시를 구하기 위해 DateComponents 설정
+        var endTime = calendar.dateComponents([.year, .month, .day], from: currentTime)
+        if endTime.hour ?? 0 >= 20 {
+            // endTime을 하루 뒤의 날짜로 설정
+            if let tomorrow = calendar.date(byAdding: .day, value: 1, to: currentTime) {
+                endTime = calendar.dateComponents([.year, .month, .day], from: tomorrow)
+            } else {
+                // 실패 시에 적절한 처리를 추가
+                print("날짜 계산에 실패했습니다.")
+            }
+        }
+        endTime.hour = 20
+        endTime.minute = 0
+        endTime.second = 0
+        
+        if let end = calendar.date(from: endTime) {
+            let interval = calendar.dateComponents([.hour, .minute, .second], from: currentTime, to: end)
+            if let timeInterval = interval.second, let formattedDate = String(format: "%02d:%02d:%02d", interval.hour ?? 0, interval.minute ?? 0, timeInterval) as String? {
+                print(formattedDate)
+            }
+        }
+    }
 }
 
 extension ShowMatchingTimeViewController {
