@@ -23,6 +23,9 @@
 		7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D75C2B51672F007BAF9C /* PersonalViewController.swift */; };
 		7835D75F2B51673F007BAF9C /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D75E2B51673F007BAF9C /* Personal.storyboard */; };
 		7835D7612B516746007BAF9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D7602B516746007BAF9C /* Profile.storyboard */; };
+		78E193FF2B5171B300128361 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E193FE2B5171B300128361 /* LookinServer */; };
+		78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E194002B5173E600128361 /* GroupAuthViewController.swift */; };
+		78F150032B51818700237C9F /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F150022B51818700237C9F /* PhotoCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,8 @@
 		7835D75C2B51672F007BAF9C /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		7835D75E2B51673F007BAF9C /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
 		7835D7602B516746007BAF9C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		78E194002B5173E600128361 /* GroupAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAuthViewController.swift; sourceTree = "<group>"; };
+		78F150022B51818700237C9F /* PhotoCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E193FF2B5171B300128361 /* LookinServer in Frameworks */,
 				233E9F5E2B51702000192B24 /* Then in Frameworks */,
 				233E9F662B5170B500192B24 /* Alamofire in Frameworks */,
 				233E9F612B51704D00192B24 /* SnapKit in Frameworks */,
@@ -103,7 +109,9 @@
 		7835D7492B51604D007BAF9C /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				78F150022B51818700237C9F /* PhotoCVC.swift */,
 				7835D74A2B516067007BAF9C /* GroupViewController.swift */,
+				78E194002B5173E600128361 /* GroupAuthViewController.swift */,
 				7835D74C2B5160DA007BAF9C /* Group.storyboard */,
 			);
 			path = Group;
@@ -164,6 +172,7 @@
 				233E9F602B51704D00192B24 /* SnapKit */,
 				233E9F622B51704D00192B24 /* SnapKit-Dynamic */,
 				233E9F652B5170B500192B24 /* Alamofire */,
+				78E193FE2B5171B300128361 /* LookinServer */,
 			);
 			productName = "GoalKeeper-iOS";
 			productReference = 7835D7322B515B11007BAF9C /* GoalKeeper-iOS.app */;
@@ -197,6 +206,7 @@
 				233E9F5C2B51702000192B24 /* XCRemoteSwiftPackageReference "Then" */,
 				233E9F5F2B51704D00192B24 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				233E9F642B5170B500192B24 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				78E193FD2B5171B300128361 /* XCRemoteSwiftPackageReference "LookinServer" */,
 			);
 			productRefGroup = 7835D7332B515B11007BAF9C /* Products */;
 			projectDirPath = "";
@@ -230,10 +240,12 @@
 			files = (
 				7835D74B2B516067007BAF9C /* GroupViewController.swift in Sources */,
 				7835D73A2B515B11007BAF9C /* ViewController.swift in Sources */,
+				78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */,
 				7835D75B2B516726007BAF9C /* ProfileViewController.swift in Sources */,
 				7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */,
 				7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */,
 				7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */,
+				78F150032B51818700237C9F /* PhotoCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +494,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		78E193FD2B5171B300128361 /* XCRemoteSwiftPackageReference "LookinServer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QMUI/LookinServer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -504,6 +524,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 233E9F642B5170B500192B24 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		78E193FE2B5171B300128361 /* LookinServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78E193FD2B5171B300128361 /* XCRemoteSwiftPackageReference "LookinServer" */;
+			productName = LookinServer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
