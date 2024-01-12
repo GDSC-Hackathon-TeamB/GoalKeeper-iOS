@@ -72,21 +72,21 @@ class SelectGoalViewController: UIViewController {
 
        
        @IBAction func gotoMa(_ sender: Any) {
-           
-                let storyboard = UIStoryboard(name: "Group", bundle: nil)
-        
-                guard let groupAuthVC = storyboard.instantiateViewController(withIdentifier: "MatchingTimeViewController") as? MatchingTimeViewController else {
-        
-                    print("MatchingTimeViewController를 찾을 수 없습니다.")
-                    return
-                }
-        
-                self.navigationController?.pushViewController(groupAuthVC, animated: true)
-        
-        
-        
-                print(1)
-           
+//           
+//                let storyboard = UIStoryboard(name: "Group", bundle: nil)
+//        
+//                guard let groupAuthVC = storyboard.instantiateViewController(withIdentifier: "MatchingTimeViewController") as? MatchingTimeViewController else {
+//        
+//                    print("MatchingTimeViewController를 찾을 수 없습니다.")
+//                    return
+//                }
+//        
+//                self.navigationController?.pushViewController(groupAuthVC, animated: true)
+//        
+//        
+//        
+//                print(1)
+//           
            
        }
        
