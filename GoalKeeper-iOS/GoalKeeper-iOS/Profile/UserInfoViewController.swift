@@ -58,6 +58,25 @@ class UserInfoViewController: UIViewController {
         $0.textColor = .gray
     }
     
+    let neighborGoal = UILabel().then {
+        $0.text = "교육"
+        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        $0.textColor = .black
+        $0.backgroundColor = UIColor(red: 1, green: 0.745, blue: 0.596, alpha: 1)
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 10
+        $0.textAlignment = .center
+    }
+    let personalGoal = UILabel().then {
+        $0.text = "운동"
+        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        $0.textColor = .black
+        $0.backgroundColor = UIColor(red: 1, green: 0.745, blue: 0.596, alpha: 1)
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 10
+        $0.textAlignment = .center
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,10 +119,13 @@ extension UserInfoViewController {
         
         view.addSubview(myGoalLabel)
         view.addSubview(noGoalLabel)
+        view.addSubview(neighborGoal)
+        view.addSubview(personalGoal)
     }
     
     func layoutConstraints() {
         let safeArea = view.safeAreaLayoutGuide
+        let screenWidth = UIScreen.main.bounds.size.width
         
         nicknameLabel.snp.makeConstraints { make in
             make.top.equalTo(safeArea.snp.top).offset(40)
@@ -142,6 +164,17 @@ extension UserInfoViewController {
         noGoalLabel.snp.makeConstraints { make in
             make.top.equalTo(myGoalLabel.snp.bottom).offset(10)
             make.leading.equalTo(safeArea.snp.leading).offset(25)
+        }
+        
+        neighborGoal.snp.makeConstraints { make in
+            make.width.height.equalTo(screenWidth*0.35)
+            make.top.equalTo(myGoalLabel.snp.bottom).offset(28)
+            make.leading.equalTo(safeArea.snp.leading).offset(40)
+        }
+        personalGoal.snp.makeConstraints { make in
+            make.width.height.equalTo(screenWidth*0.35)
+            make.top.equalTo(myGoalLabel.snp.bottom).offset(28)
+            make.trailing.equalTo(safeArea.snp.trailing).offset(-40)
         }
     }
 }
