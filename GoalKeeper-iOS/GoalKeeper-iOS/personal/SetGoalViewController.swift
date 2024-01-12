@@ -44,7 +44,7 @@ class SetGoalViewController: UIViewController, UITextViewDelegate {
     }
     
     let matchingButton = UIButton().then {
-        $0.backgroundColor = UIColor(red: 1, green: 0.497, blue: 0.202, alpha: 1)
+        $0.backgroundColor = UIColor(red: 1, green: 0.497, blue: 0.202, alpha: 0.7)
         $0.tintColor = .white
         $0.setTitle("매칭하기", for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
@@ -95,8 +95,13 @@ class SetGoalViewController: UIViewController, UITextViewDelegate {
         
         if textCount > 20 {
             numberOfText.textColor = .red
+            matchingButton.backgroundColor = UIColor(red: 1, green: 0.497, blue: 0.202, alpha: 0.7)
+        } else if textCount == 0 {
+            numberOfText.textColor = .black
+            matchingButton.backgroundColor = UIColor(red: 1, green: 0.497, blue: 0.202, alpha: 0.7)
         } else {
             numberOfText.textColor = .black
+            matchingButton.backgroundColor = UIColor(red: 1, green: 0.497, blue: 0.202, alpha: 1)
         }
     }
     
