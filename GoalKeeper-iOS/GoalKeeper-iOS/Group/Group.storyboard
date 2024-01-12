@@ -89,6 +89,15 @@
                                     <constraint firstAttribute="height" constant="1" id="Eyc-LJ-mvi"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQP-O2-TnQ">
+                                <rect key="frame" x="159" y="599" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="FON-iN-i2I" kind="presentation" modalPresentationStyle="fullScreen" id="0lF-k4-bY6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aV0-ta-9cX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -110,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngs-kw-7jA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4628.2442748091598" y="-37.323943661971832"/>
+            <point key="canvasLocation" x="4515" y="-37"/>
         </scene>
         <!--Select Goal View Controller-->
         <scene sceneID="ynm-f4-Y50">
@@ -220,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UC3-rx-s2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5585.4961832061063" y="-37.323943661971832"/>
+            <point key="canvasLocation" x="6150" y="-235"/>
         </scene>
         <!--GroupAuthViewController-->
         <scene sceneID="G1q-pG-apb">
@@ -231,7 +240,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CJ3-dK-uWi">
-                                <rect key="frame" x="16" y="63" width="361" height="176"/>
+                                <rect key="frame" x="16" y="4" width="361" height="176"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2m-h5-kQ3">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="63"/>
@@ -273,7 +282,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증 ( 6/8 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQf-4N-ZyH">
-                                <rect key="frame" x="15.999999999999993" y="249" width="97.333333333333314" height="65"/>
+                                <rect key="frame" x="15.999999999999993" y="190" width="97.333333333333314" height="124"/>
                                 <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -284,7 +293,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="q4s-YQ-dy7"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JYU-Vz-xnh">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JYU-Vz-xnh">
                                     <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -292,7 +301,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PhotoCVC" reuseIdentifier="PhotoCVC" id="530-uT-Pqq" customClass="PhotoCVC" customModule="GoalKeeper_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="15" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iik-a8-p0b">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -306,7 +315,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내꺼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7B-So-fnU">
-                                <rect key="frame" x="16" y="311" width="29.666666666666671" height="20.333333333333314"/>
+                                <rect key="frame" x="16" y="252.00000000000003" width="29.666666666666671" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -348,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eo7-E1-I8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7390" y="-37"/>
+            <point key="canvasLocation" x="5327" y="208"/>
         </scene>
         <!--이웃사랑-->
         <scene sceneID="ybW-MD-qKl">
