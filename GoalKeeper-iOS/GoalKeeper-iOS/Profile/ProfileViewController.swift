@@ -54,8 +54,19 @@ class ProfileViewController: UIViewController {
 
         addView()
         layoutConstraints()
+        
+        buttonActions()
     }
     
+    func buttonActions() {
+        nicknameView.addTarget(self, action: #selector(showUserInfoVC), for: .touchUpInside)
+    }
+    
+    @objc private func showUserInfoVC(_ sender: UIView) {
+        let nextVC = UserInfoViewController()
+        nextVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
 
     func addView() {
         view.addSubview(myLabel)
