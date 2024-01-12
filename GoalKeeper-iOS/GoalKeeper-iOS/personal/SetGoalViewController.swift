@@ -37,6 +37,12 @@ class SetGoalViewController: UIViewController {
         $0.textContainerInset = UIEdgeInsets(top: 25, left: 15, bottom: 25, right: 15)
     }
     
+    let numberOfText = UILabel().then {
+        $0.text = "0/20"
+        $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        $0.textColor = .black
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +76,7 @@ extension SetGoalViewController {
         view.addSubview(setGoalTitle)
         view.addSubview(setGoalSubtitle)
         view.addSubview(textView)
+        view.addSubview(numberOfText)
     }
     
     func layoutConstraints() {
@@ -89,6 +96,10 @@ extension SetGoalViewController {
             make.width.equalTo(screenWidth*0.85)
             make.top.equalTo(setGoalSubtitle.snp.bottom).offset(35)
             make.centerX.equalTo(view.snp.centerX)
+        }
+        numberOfText.snp.makeConstraints { make in
+            make.trailing.equalTo(textView.snp.trailing).offset(-20)
+            make.bottom.equalTo(textView.snp.bottom).offset(-15)
         }
     }
 }
