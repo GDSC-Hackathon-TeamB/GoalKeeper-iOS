@@ -10,6 +10,8 @@
 		233E9F5E2B51702000192B24 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F5D2B51702000192B24 /* Then */; };
 		233E9F612B51704D00192B24 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F602B51704D00192B24 /* SnapKit */; };
 		233E9F662B5170B500192B24 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F652B5170B500192B24 /* Alamofire */; };
+		233E9F6C2B51980200192B24 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E9F6B2B51980200192B24 /* UserInfoViewController.swift */; };
+		233E9F6E2B51A70900192B24 /* MyBadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E9F6D2B51A70900192B24 /* MyBadgeViewController.swift */; };
 		7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D7352B515B11007BAF9C /* AppDelegate.swift */; };
 		7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D7372B515B11007BAF9C /* SceneDelegate.swift */; };
 		7835D73A2B515B11007BAF9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D7392B515B11007BAF9C /* ViewController.swift */; };
@@ -22,13 +24,17 @@
 		7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D75C2B51672F007BAF9C /* PersonalViewController.swift */; };
 		7835D75F2B51673F007BAF9C /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D75E2B51673F007BAF9C /* Personal.storyboard */; };
 		7835D7612B516746007BAF9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D7602B516746007BAF9C /* Profile.storyboard */; };
+		7876B45D2B51AFC300F5B128 /* MatchingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876B45C2B51AFC300F5B128 /* MatchingTimeViewController.swift */; };
 		78E193FF2B5171B300128361 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E193FE2B5171B300128361 /* LookinServer */; };
 		78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E194002B5173E600128361 /* GroupAuthViewController.swift */; };
 		78FEBE442B51982F0094A4F0 /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEBE432B51982F0094A4F0 /* PhotoCVC.swift */; };
 		78FEBE472B5199DD0094A4F0 /* BSImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 78FEBE462B5199DD0094A4F0 /* BSImagePicker */; };
+		78FEBE492B51AC5B0094A4F0 /* SelectGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEBE482B51AC5B0094A4F0 /* SelectGoalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		233E9F6B2B51980200192B24 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		233E9F6D2B51A70900192B24 /* MyBadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgeViewController.swift; sourceTree = "<group>"; };
 		7835D7322B515B11007BAF9C /* GoalKeeper-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoalKeeper-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7835D7352B515B11007BAF9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7835D7372B515B11007BAF9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,8 +58,10 @@
 		7835D75C2B51672F007BAF9C /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		7835D75E2B51673F007BAF9C /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
 		7835D7602B516746007BAF9C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		7876B45C2B51AFC300F5B128 /* MatchingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingTimeViewController.swift; sourceTree = "<group>"; };
 		78E194002B5173E600128361 /* GroupAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAuthViewController.swift; sourceTree = "<group>"; };
 		78FEBE432B51982F0094A4F0 /* PhotoCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
+		78FEBE482B51AC5B0094A4F0 /* SelectGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,8 @@
 				78FEBE432B51982F0094A4F0 /* PhotoCVC.swift */,
 				78E194002B5173E600128361 /* GroupAuthViewController.swift */,
 				7835D74A2B516067007BAF9C /* GroupViewController.swift */,
+				78FEBE482B51AC5B0094A4F0 /* SelectGoalViewController.swift */,
+				7876B45C2B51AFC300F5B128 /* MatchingTimeViewController.swift */,
 				7835D74C2B5160DA007BAF9C /* Group.storyboard */,
 			);
 			path = Group;
@@ -147,6 +157,8 @@
 			children = (
 				7835D75A2B516726007BAF9C /* ProfileViewController.swift */,
 				7835D7602B516746007BAF9C /* Profile.storyboard */,
+				233E9F6B2B51980200192B24 /* UserInfoViewController.swift */,
+				233E9F6D2B51A70900192B24 /* MyBadgeViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -239,12 +251,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7876B45D2B51AFC300F5B128 /* MatchingTimeViewController.swift in Sources */,
+				233E9F6E2B51A70900192B24 /* MyBadgeViewController.swift in Sources */,
 				7835D74B2B516067007BAF9C /* GroupViewController.swift in Sources */,
+				233E9F6C2B51980200192B24 /* UserInfoViewController.swift in Sources */,
 				7835D73A2B515B11007BAF9C /* ViewController.swift in Sources */,
 				78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */,
 				7835D75B2B516726007BAF9C /* ProfileViewController.swift in Sources */,
 				7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */,
 				7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */,
+				78FEBE492B51AC5B0094A4F0 /* SelectGoalViewController.swift in Sources */,
 				7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */,
 				78FEBE442B51982F0094A4F0 /* PhotoCVC.swift in Sources */,
 			);
