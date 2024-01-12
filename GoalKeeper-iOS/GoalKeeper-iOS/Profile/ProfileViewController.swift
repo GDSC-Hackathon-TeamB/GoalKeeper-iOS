@@ -35,7 +35,7 @@ class ProfileViewController: UIViewController {
     lazy var agreementView = arrowView(title: "서비스 이용동의", labelFont: UIFont.systemFont(ofSize: 18, weight: .medium))
     lazy var privacyPolicyView = arrowView(title: "개인정보처리방침", labelFont: UIFont.systemFont(ofSize: 18, weight: .medium))
     lazy var inquireView = arrowView(title: "문의하기", labelFont: UIFont.systemFont(ofSize: 18, weight: .medium))
-    
+    //
     let versionLabel = UILabel().then {
         $0.text = "버전정보"
         $0.font = UIFont.systemFont(ofSize: 18, weight: .medium)
