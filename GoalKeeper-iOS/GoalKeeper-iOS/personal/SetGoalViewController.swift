@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SetGoalViewController: UIViewController {
+class SetGoalViewController: UIViewController, UITextViewDelegate {
     
     let backButton = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
@@ -53,6 +53,8 @@ class SetGoalViewController: UIViewController {
         layoutConstraints()
         
         buttonActions()
+        
+        textView.delegate = self
     }
     
     func setNavigationBar() {
@@ -64,11 +66,18 @@ class SetGoalViewController: UIViewController {
     
     func buttonActions() {
         backButton.addTarget(self, action: #selector(didClickBackButton), for: .touchUpInside)
+        
     }
     
     @objc func didClickBackButton() {
         navigationController?.popViewController(animated: true)
     }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let textCount = textView.text?.count ?? 0
+        numberOfText.text = "\(textCount)/20"
+    }
+    
 }
 
 extension SetGoalViewController {
