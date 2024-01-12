@@ -20,6 +20,8 @@ class UserInfoViewController: UIViewController {
         view.backgroundColor = .white
         
         setNavigationBar()
+        
+        buttonActions()
     }
     
     func setNavigationBar() {
@@ -27,5 +29,13 @@ class UserInfoViewController: UIViewController {
         navigationItem.title = "회원정보"
         let backButtonItem = UIBarButtonItem(customView: backButton)
         navigationItem.leftBarButtonItem = backButtonItem
+    }
+    
+    func buttonActions() {
+        backButton.addTarget(self, action: #selector(didClickBackButton), for: .touchUpInside)
+    }
+    
+    @objc func didClickBackButton() {
+        navigationController?.popViewController(animated: true)
     }
 }
