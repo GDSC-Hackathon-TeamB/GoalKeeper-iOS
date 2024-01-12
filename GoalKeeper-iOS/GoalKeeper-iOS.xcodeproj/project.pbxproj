@@ -24,6 +24,8 @@
 		7835D7612B516746007BAF9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D7602B516746007BAF9C /* Profile.storyboard */; };
 		78E193FF2B5171B300128361 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E193FE2B5171B300128361 /* LookinServer */; };
 		78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E194002B5173E600128361 /* GroupAuthViewController.swift */; };
+		78FEBE442B51982F0094A4F0 /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEBE432B51982F0094A4F0 /* PhotoCVC.swift */; };
+		78FEBE472B5199DD0094A4F0 /* BSImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 78FEBE462B5199DD0094A4F0 /* BSImagePicker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,7 @@
 		7835D75E2B51673F007BAF9C /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
 		7835D7602B516746007BAF9C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		78E194002B5173E600128361 /* GroupAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAuthViewController.swift; sourceTree = "<group>"; };
+		78FEBE432B51982F0094A4F0 /* PhotoCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 				78E193FF2B5171B300128361 /* LookinServer in Frameworks */,
 				233E9F5E2B51702000192B24 /* Then in Frameworks */,
 				233E9F662B5170B500192B24 /* Alamofire in Frameworks */,
+				78FEBE472B5199DD0094A4F0 /* BSImagePicker in Frameworks */,
 				233E9F612B51704D00192B24 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,8 +109,9 @@
 		7835D7492B51604D007BAF9C /* Group */ = {
 			isa = PBXGroup;
 			children = (
-				7835D74A2B516067007BAF9C /* GroupViewController.swift */,
+				78FEBE432B51982F0094A4F0 /* PhotoCVC.swift */,
 				78E194002B5173E600128361 /* GroupAuthViewController.swift */,
+				7835D74A2B516067007BAF9C /* GroupViewController.swift */,
 				7835D74C2B5160DA007BAF9C /* Group.storyboard */,
 			);
 			path = Group;
@@ -167,6 +172,7 @@
 				233E9F602B51704D00192B24 /* SnapKit */,
 				233E9F652B5170B500192B24 /* Alamofire */,
 				78E193FE2B5171B300128361 /* LookinServer */,
+				78FEBE462B5199DD0094A4F0 /* BSImagePicker */,
 			);
 			productName = "GoalKeeper-iOS";
 			productReference = 7835D7322B515B11007BAF9C /* GoalKeeper-iOS.app */;
@@ -201,6 +207,7 @@
 				233E9F5F2B51704D00192B24 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				233E9F642B5170B500192B24 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				78E193FD2B5171B300128361 /* XCRemoteSwiftPackageReference "LookinServer" */,
+				78FEBE452B5199DD0094A4F0 /* XCRemoteSwiftPackageReference "BSImagePicker" */,
 			);
 			productRefGroup = 7835D7332B515B11007BAF9C /* Products */;
 			projectDirPath = "";
@@ -239,6 +246,7 @@
 				7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */,
 				7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */,
 				7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */,
+				78FEBE442B51982F0094A4F0 /* PhotoCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +402,9 @@
 				DEVELOPMENT_TEAM = D2DRA3F792;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GoalKeeper-iOS/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "Privacy - Photo Library Usage Description";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 촬영가능";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진및 동영상 추가권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -424,6 +435,9 @@
 				DEVELOPMENT_TEAM = D2DRA3F792;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GoalKeeper-iOS/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "Privacy - Photo Library Usage Description";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 촬영가능";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진및 동영상 추가권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -499,6 +513,14 @@
 				minimumVersion = 1.2.6;
 			};
 		};
+		78FEBE452B5199DD0094A4F0 /* XCRemoteSwiftPackageReference "BSImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mikaoj/BSImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -521,6 +543,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 78E193FD2B5171B300128361 /* XCRemoteSwiftPackageReference "LookinServer" */;
 			productName = LookinServer;
+		};
+		78FEBE462B5199DD0094A4F0 /* BSImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78FEBE452B5199DD0094A4F0 /* XCRemoteSwiftPackageReference "BSImagePicker" */;
+			productName = BSImagePicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
