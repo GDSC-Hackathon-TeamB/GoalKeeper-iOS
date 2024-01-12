@@ -18,11 +18,6 @@ class ProfileViewController: UIViewController {
     }
     
     // 닉네임
-//    var nicknameLabel = UILabel().then {
-//        $0.text = ""
-//        $0.font = UIFont(name: "Pretendard-Bold", size: 20)
-//        $0.textColor = .black
-//    }
     lazy var nicknameView = arrowView(title: "닉네임", labelFont: UIFont.systemFont(ofSize: 20, weight: .bold))
     
     // 구분선
@@ -40,8 +35,17 @@ class ProfileViewController: UIViewController {
     lazy var agreementView = arrowView(title: "서비스 이용동의", labelFont: UIFont.systemFont(ofSize: 20, weight: .medium))
     lazy var privacyPolicyView = arrowView(title: "개인정보처리방침", labelFont: UIFont.systemFont(ofSize: 20, weight: .medium))
     lazy var inquireView = arrowView(title: "문의하기", labelFont: UIFont.systemFont(ofSize: 20, weight: .medium))
-    lazy var versionView = arrowView(title: "버전정보", labelFont: UIFont.systemFont(ofSize: 20, weight: .medium))
     
+    let versionLabel = UILabel().then {
+        $0.text = "버전정보"
+        $0.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        $0.textColor = .black
+    }
+    let version = UILabel().then {
+        $0.text = "1.0.0"
+        $0.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        $0.textColor = .black
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +65,8 @@ class ProfileViewController: UIViewController {
         view.addSubview(privacyPolicyView)
         view.addSubview(inquireView)
         view.addSubview(thinDivider2)
-        view.addSubview(versionView)
+        view.addSubview(versionLabel)
+        view.addSubview(version)
     }
     
     func layoutConstraints() {
@@ -120,10 +125,13 @@ class ProfileViewController: UIViewController {
             make.centerX.equalTo(view.snp.centerX)
         }
         
-        versionView.snp.makeConstraints { make in
-            make.width.equalTo(view.snp.width).offset(-50)
+        versionLabel.snp.makeConstraints { make in
             make.top.equalTo(thinDivider2.snp.bottom).offset(30)
-            make.centerX.equalTo(view.snp.centerX)
+            make.leading.equalTo(safeArea.snp.leading).offset(25)
+        }
+        version.snp.makeConstraints { make in
+            make.top.equalTo(thinDivider2.snp.bottom).offset(30)
+            make.trailing.equalTo(safeArea.snp.trailing).offset(-25)
         }
     }
 
