@@ -76,6 +76,12 @@ class SetGoalViewController: UIViewController, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         let textCount = textView.text?.count ?? 0
         numberOfText.text = "\(textCount)/20"
+        
+        if textCount > 20 {
+            numberOfText.textColor = .red
+        } else {
+            numberOfText.textColor = .black
+        }
     }
     
 }
