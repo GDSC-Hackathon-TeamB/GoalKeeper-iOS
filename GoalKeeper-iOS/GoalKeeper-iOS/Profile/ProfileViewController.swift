@@ -60,10 +60,17 @@ class ProfileViewController: UIViewController {
     
     func buttonActions() {
         nicknameView.addTarget(self, action: #selector(showUserInfoVC), for: .touchUpInside)
+        badgeView.addTarget(self, action: #selector(showMyBadgeVC), for: .touchUpInside)
     }
     
     @objc private func showUserInfoVC(_ sender: UIView) {
         let nextVC = UserInfoViewController()
+        nextVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @objc private func showMyBadgeVC(_ sender: UIView) {
+        let nextVC = MyBadgeViewController()
         nextVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(nextVC, animated: true)
     }
