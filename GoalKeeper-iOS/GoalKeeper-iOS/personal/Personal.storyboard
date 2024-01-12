@@ -8,11 +8,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Pretendard-Bold.otf">
-            <string>Pretendard-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Personal View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -23,8 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매칭중이 아니에요.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U9-U9-v9X">
-                                <rect key="frame" x="100" y="303" width="193" height="30"/>
-                                <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="25"/>
+                                <rect key="frame" x="96.666666666666686" y="303" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GRU-ZS-5tl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -50,7 +48,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매칭하러가기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytf-27-IGG">
                                         <rect key="frame" x="72.999999999999986" y="23" width="104.00000000000001" height="24"/>
-                                        <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -197,17 +195,61 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="gotoNext:" destination="QMi-dm-ePM" eventType="touchUpInside" id="Prg-Rc-V9h"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="as9-qe-0w3">
+                                <rect key="frame" x="21.666666666666657" y="650" width="350" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매칭하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsu-Uf-dg9">
+                                        <rect key="frame" x="130" y="14.333333333333369" width="90" height="31.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRB-wR-s5v">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="gotoNext:" destination="QMi-dm-ePM" eventType="touchUpInside" id="vA5-Ut-ARP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.74509803919999995" blue="0.59607843140000005" alpha="0.70214197020000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aRB-wR-s5v" secondAttribute="trailing" id="0Z5-U3-2Ke"/>
+                                    <constraint firstItem="aRB-wR-s5v" firstAttribute="leading" secondItem="as9-qe-0w3" secondAttribute="leading" id="2pY-q7-tBb"/>
+                                    <constraint firstItem="aRB-wR-s5v" firstAttribute="top" secondItem="as9-qe-0w3" secondAttribute="top" id="4dw-IZ-Gbt"/>
+                                    <constraint firstItem="Qsu-Uf-dg9" firstAttribute="centerX" secondItem="as9-qe-0w3" secondAttribute="centerX" id="7Pk-rS-SNY"/>
+                                    <constraint firstItem="Qsu-Uf-dg9" firstAttribute="centerY" secondItem="as9-qe-0w3" secondAttribute="centerY" id="ODA-wr-EYC"/>
+                                    <constraint firstAttribute="height" constant="60" id="c6R-Xl-rG0"/>
+                                    <constraint firstAttribute="bottom" secondItem="aRB-wR-s5v" secondAttribute="bottom" id="dEy-yM-reE"/>
+                                    <constraint firstAttribute="width" constant="350" id="sla-Cb-1fd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hgz-9F-5Qv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="as9-qe-0w3" firstAttribute="centerX" secondItem="8XA-fH-Fp3" secondAttribute="centerX" id="IsY-iC-Z8K"/>
                             <constraint firstItem="dll-TQ-8lu" firstAttribute="centerX" secondItem="rlD-X1-JmI" secondAttribute="centerX" id="L2T-0V-rV4"/>
                             <constraint firstItem="8XA-fH-Fp3" firstAttribute="top" secondItem="dll-TQ-8lu" secondAttribute="bottom" constant="50" id="Vgd-3c-aXX"/>
+                            <constraint firstItem="as9-qe-0w3" firstAttribute="top" secondItem="8XA-fH-Fp3" secondAttribute="bottom" constant="50" id="jtZ-Wz-f5v"/>
                             <constraint firstItem="dll-TQ-8lu" firstAttribute="top" secondItem="Hgz-9F-5Qv" secondAttribute="top" constant="150" id="pI1-Te-XZD"/>
                             <constraint firstItem="8XA-fH-Fp3" firstAttribute="centerX" secondItem="rlD-X1-JmI" secondAttribute="centerX" id="qGh-Uj-kBJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DailyView" destination="17X-9V-1Xb" id="R3Y-C7-lqu"/>
+                        <outlet property="exerciseView" destination="PCa-oP-SYV" id="vav-rc-uOf"/>
+                        <outlet property="gotonext" destination="as9-qe-0w3" id="eYF-V3-4q1"/>
+                        <outlet property="readingView" destination="bh1-Gd-tUE" id="5wp-ar-3jR"/>
+                        <outlet property="studyView" destination="ff1-Fb-FXV" id="9Gf-Pk-Pqq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mic-oy-ejz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
