@@ -24,6 +24,8 @@
 		7835D75F2B51673F007BAF9C /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D75E2B51673F007BAF9C /* Personal.storyboard */; };
 		7835D7612B516746007BAF9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D7602B516746007BAF9C /* Profile.storyboard */; };
 		78E193FF2B5171B300128361 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E193FE2B5171B300128361 /* LookinServer */; };
+		78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E194002B5173E600128361 /* GroupAuthViewController.swift */; };
+		78F150032B51818700237C9F /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F150022B51818700237C9F /* PhotoCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		7835D75C2B51672F007BAF9C /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		7835D75E2B51673F007BAF9C /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
 		7835D7602B516746007BAF9C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		78E194002B5173E600128361 /* GroupAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAuthViewController.swift; sourceTree = "<group>"; };
+		78F150022B51818700237C9F /* PhotoCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,9 @@
 		7835D7492B51604D007BAF9C /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				78F150022B51818700237C9F /* PhotoCVC.swift */,
 				7835D74A2B516067007BAF9C /* GroupViewController.swift */,
+				78E194002B5173E600128361 /* GroupAuthViewController.swift */,
 				7835D74C2B5160DA007BAF9C /* Group.storyboard */,
 			);
 			path = Group;
@@ -234,10 +240,12 @@
 			files = (
 				7835D74B2B516067007BAF9C /* GroupViewController.swift in Sources */,
 				7835D73A2B515B11007BAF9C /* ViewController.swift in Sources */,
+				78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */,
 				7835D75B2B516726007BAF9C /* ProfileViewController.swift in Sources */,
 				7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */,
 				7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */,
 				7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */,
+				78F150032B51818700237C9F /* PhotoCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
