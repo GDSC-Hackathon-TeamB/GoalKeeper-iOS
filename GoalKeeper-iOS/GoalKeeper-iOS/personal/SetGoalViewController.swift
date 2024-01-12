@@ -43,6 +43,15 @@ class SetGoalViewController: UIViewController, UITextViewDelegate {
         $0.textColor = .black
     }
     
+    let matchingButton = UIButton().then {
+        $0.backgroundColor = UIColor(red: 1, green: 0.497, blue: 0.202, alpha: 1)
+        $0.tintColor = .white
+        $0.setTitle("매칭하기", for: .normal)
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,10 +75,17 @@ class SetGoalViewController: UIViewController, UITextViewDelegate {
     
     func buttonActions() {
         backButton.addTarget(self, action: #selector(didClickBackButton), for: .touchUpInside)
-        
+        matchingButton.addTarget(self, action: #selector(didClickMatchingButton), for: .touchUpInside)
     }
     
     @objc func didClickBackButton() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func didClickMatchingButton() {
+        // 매칭하기 버튼 클릭 시
+        // TODO: api 연결
+        
         navigationController?.popViewController(animated: true)
     }
     
@@ -92,6 +108,7 @@ extension SetGoalViewController {
         view.addSubview(setGoalSubtitle)
         view.addSubview(textView)
         view.addSubview(numberOfText)
+        view.addSubview(matchingButton)
     }
     
     func layoutConstraints() {
@@ -115,6 +132,12 @@ extension SetGoalViewController {
         numberOfText.snp.makeConstraints { make in
             make.trailing.equalTo(textView.snp.trailing).offset(-20)
             make.bottom.equalTo(textView.snp.bottom).offset(-15)
+        }
+        matchingButton.snp.makeConstraints { make in
+            make.width.equalTo(screenWidth*0.85)
+            make.height.equalTo(50)
+            make.bottom.equalTo(safeArea.snp.bottom).offset(-25)
+            make.centerX.equalTo(view.snp.centerX)
         }
     }
 }
