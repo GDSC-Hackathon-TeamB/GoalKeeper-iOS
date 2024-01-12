@@ -29,6 +29,7 @@
 		7864F5EB2B51EB3E00766584 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7864F5EA2B51EB3E00766584 /* LoginPageViewController.swift */; };
 		7864F5ED2B51ECE000766584 /* RewardPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7864F5EC2B51ECE000766584 /* RewardPopUp.swift */; };
 		7864F5EF2B51EE7E00766584 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7864F5EE2B51EE7E00766584 /* LoginViewController.swift */; };
+		787680472B51FD74004239D1 /* PersonalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787680462B51FD74004239D1 /* PersonalCollectionViewController.swift */; };
 		7876B45F2B51BB4900F5B128 /* SelectGoalPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876B45E2B51BB4900F5B128 /* SelectGoalPersonalViewController.swift */; };
 		78E193FF2B5171B300128361 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E193FE2B5171B300128361 /* LookinServer */; };
 		78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E194002B5173E600128361 /* GroupAuthViewController.swift */; };
@@ -68,6 +69,7 @@
 		7864F5EA2B51EB3E00766584 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		7864F5EC2B51ECE000766584 /* RewardPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardPopUp.swift; path = "../../../../../Downloads/GoalKeeper-iOS-b14fa975aa11b6318a9dcda63d37cd1fa2167b44/GoalKeeper-iOS/GoalKeeper-iOS/RewardPopUp.swift"; sourceTree = "<group>"; };
 		7864F5EE2B51EE7E00766584 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		787680462B51FD74004239D1 /* PersonalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCollectionViewController.swift; sourceTree = "<group>"; };
 		7876B45E2B51BB4900F5B128 /* SelectGoalPersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalPersonalViewController.swift; sourceTree = "<group>"; };
 		78E194002B5173E600128361 /* GroupAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAuthViewController.swift; sourceTree = "<group>"; };
 		78FEBE432B51982F0094A4F0 /* PhotoCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				7835D75C2B51672F007BAF9C /* PersonalViewController.swift */,
 				7835D75E2B51673F007BAF9C /* Personal.storyboard */,
+				787680462B51FD74004239D1 /* PersonalCollectionViewController.swift */,
 				7876B45E2B51BB4900F5B128 /* SelectGoalPersonalViewController.swift */,
 				233E9F6F2B51ADDB00192B24 /* SetGoalViewController.swift */,
 				233E9F712B51C93C00192B24 /* ShowMatchingTimeViewController.swift */,
@@ -272,6 +275,7 @@
 				7876B45F2B51BB4900F5B128 /* SelectGoalPersonalViewController.swift in Sources */,
 				7835D73A2B515B11007BAF9C /* ViewController.swift in Sources */,
 				7864F5ED2B51ECE000766584 /* RewardPopUp.swift in Sources */,
+				787680472B51FD74004239D1 /* PersonalCollectionViewController.swift in Sources */,
 				233E9F702B51ADDB00192B24 /* SetGoalViewController.swift in Sources */,
 				233E9F722B51C93C00192B24 /* ShowMatchingTimeViewController.swift in Sources */,
 				78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */,

@@ -41,5 +41,22 @@ class PersonalViewController: UIViewController {
            
        }
        
+    @IBAction func gotest(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Personal", bundle: nil)
+
+        guard let groupAuthVC = storyboard.instantiateViewController(withIdentifier: "PersonalCollectionViewController") as? PersonalCollectionViewController else {
+
+            print("PersonalCollectionViewController를 찾을 수 없습니다.")
+            return
+        }
+
+        self.navigationController?.pushViewController(groupAuthVC, animated: true)
+
+
+
+        print(1)
+   
+    }
     
 }
