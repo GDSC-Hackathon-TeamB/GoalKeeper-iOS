@@ -30,11 +30,11 @@ class SelectGoalPersonalViewController: UIViewController {
       }
 
       private func setupViews() {
-          exerciseView.layer.cornerRadius = 12
-          studyView.layer.cornerRadius = 12
-          readingView.layer.cornerRadius = 12
-          DailyView.layer.cornerRadius = 12
-          gotonext.layer.cornerRadius = 12
+          exerciseView?.layer.cornerRadius = 12
+          studyView?.layer.cornerRadius = 12
+          readingView?.layer.cornerRadius = 12
+          DailyView?.layer.cornerRadius = 12
+          gotonext?.layer.cornerRadius = 12
       }
 
       private func setupGestureRecognizers() {
@@ -43,10 +43,10 @@ class SelectGoalPersonalViewController: UIViewController {
           let readingTap = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
           let dailyTap = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
           
-          exerciseView.addGestureRecognizer(exerciseTap)
-          studyView.addGestureRecognizer(studyTap)
-          readingView.addGestureRecognizer(readingTap)
-          DailyView.addGestureRecognizer(dailyTap)
+          exerciseView?.addGestureRecognizer(exerciseTap)
+          studyView?.addGestureRecognizer(studyTap)
+          readingView?.addGestureRecognizer(readingTap)
+          DailyView?.addGestureRecognizer(dailyTap)
       }
 
       @objc private func viewTapped(_ gesture: UITapGestureRecognizer) {
@@ -60,7 +60,7 @@ class SelectGoalPersonalViewController: UIViewController {
 
       private func updateNextButtonColor() {
           let isSelected = selectedView != nil
-          gotonext.backgroundColor = isSelected ? #colorLiteral(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.00) : #colorLiteral(red: 1.00, green: 0.75, blue: 0.72, alpha: 0.70)
+          gotonext?.backgroundColor = isSelected ? #colorLiteral(red: 1.00, green: 0.50, blue: 0.00, alpha: 1.00) : #colorLiteral(red: 1.00, green: 0.75, blue: 0.72, alpha: 0.70)
       }
 
     @IBAction func gotoNext(_ sender: Any) {
