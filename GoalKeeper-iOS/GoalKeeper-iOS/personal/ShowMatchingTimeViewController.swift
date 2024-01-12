@@ -37,6 +37,8 @@ class ShowMatchingTimeViewController: UIViewController {
         $0.clipsToBounds = true
     }
     
+    var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,10 +49,10 @@ class ShowMatchingTimeViewController: UIViewController {
         addView()
         layoutConstraints()
         
-        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     
-    func updateTime() {
+    @objc func updateTime() {
         let currentTime = Date()
         
         // Calendar 인스턴스 생성
@@ -74,9 +76,15 @@ class ShowMatchingTimeViewController: UIViewController {
         if let end = calendar.date(from: endTime) {
             let interval = calendar.dateComponents([.hour, .minute, .second], from: currentTime, to: end)
             if let timeInterval = interval.second, let formattedDate = String(format: "%02d:%02d:%02d", interval.hour ?? 0, interval.minute ?? 0, timeInterval) as String? {
-                print(formattedDate)
+                time.text = formattedDate
             }
         }
+    }
+    
+    deinit {
+        // 타이머 정리
+        timer?.invalidate()
+        timer = nil
     }
 }
 
