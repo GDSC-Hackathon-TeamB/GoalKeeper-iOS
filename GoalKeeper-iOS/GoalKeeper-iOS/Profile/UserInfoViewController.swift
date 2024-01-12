@@ -186,7 +186,7 @@ extension UserInfoViewController {
         }
         
         logOutButton.snp.makeConstraints { make in
-            make.bottom.equalTo(safeArea.snp.bottom).offset(-10)
+            make.bottom.equalTo(safeArea.snp.bottom)
             make.centerX.equalTo(view.snp.centerX)
         }
     }
