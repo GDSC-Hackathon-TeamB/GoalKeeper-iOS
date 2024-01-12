@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		233E9F5E2B51702000192B24 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F5D2B51702000192B24 /* Then */; };
 		233E9F612B51704D00192B24 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F602B51704D00192B24 /* SnapKit */; };
-		233E9F632B51704D00192B24 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F622B51704D00192B24 /* SnapKit-Dynamic */; };
 		233E9F662B5170B500192B24 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F652B5170B500192B24 /* Alamofire */; };
 		7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D7352B515B11007BAF9C /* AppDelegate.swift */; };
 		7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D7372B515B11007BAF9C /* SceneDelegate.swift */; };
@@ -25,7 +24,6 @@
 		7835D7612B516746007BAF9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D7602B516746007BAF9C /* Profile.storyboard */; };
 		78E193FF2B5171B300128361 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E193FE2B5171B300128361 /* LookinServer */; };
 		78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E194002B5173E600128361 /* GroupAuthViewController.swift */; };
-		78F150032B51818700237C9F /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F150022B51818700237C9F /* PhotoCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +51,6 @@
 		7835D75E2B51673F007BAF9C /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
 		7835D7602B516746007BAF9C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		78E194002B5173E600128361 /* GroupAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAuthViewController.swift; sourceTree = "<group>"; };
-		78F150022B51818700237C9F /* PhotoCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +62,6 @@
 				233E9F5E2B51702000192B24 /* Then in Frameworks */,
 				233E9F662B5170B500192B24 /* Alamofire in Frameworks */,
 				233E9F612B51704D00192B24 /* SnapKit in Frameworks */,
-				233E9F632B51704D00192B24 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +105,6 @@
 		7835D7492B51604D007BAF9C /* Group */ = {
 			isa = PBXGroup;
 			children = (
-				78F150022B51818700237C9F /* PhotoCVC.swift */,
 				7835D74A2B516067007BAF9C /* GroupViewController.swift */,
 				78E194002B5173E600128361 /* GroupAuthViewController.swift */,
 				7835D74C2B5160DA007BAF9C /* Group.storyboard */,
@@ -170,7 +165,6 @@
 			packageProductDependencies = (
 				233E9F5D2B51702000192B24 /* Then */,
 				233E9F602B51704D00192B24 /* SnapKit */,
-				233E9F622B51704D00192B24 /* SnapKit-Dynamic */,
 				233E9F652B5170B500192B24 /* Alamofire */,
 				78E193FE2B5171B300128361 /* LookinServer */,
 			);
@@ -245,7 +239,6 @@
 				7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */,
 				7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */,
 				7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */,
-				78F150032B51818700237C9F /* PhotoCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -380,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -395,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2DRA3F792;
@@ -412,6 +406,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "yizihoon.GoalKeeper-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -423,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2DRA3F792;
@@ -440,6 +436,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "yizihoon.GoalKeeper-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,11 +511,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 233E9F5F2B51704D00192B24 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		233E9F622B51704D00192B24 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 233E9F5F2B51704D00192B24 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		233E9F652B5170B500192B24 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
