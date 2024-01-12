@@ -49,11 +49,22 @@ class LoginViewController: UIViewController {
         layoutConstraints()
         
         showPWImage.addTarget(self, action: #selector(showPW), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+
     }
     
     @objc func showPW() {
         pwTextField.isSecureTextEntry = !pwTextField.isSecureTextEntry
     }
+    @objc func loginButtonTapped() {
+           // 스토리보드를 사용하여 TabBarController 로드
+           let storyboard = UIStoryboard(name: "Main", bundle: nil) // 'Main'은 스토리보드 이름입니다.
+           if let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController {
+               // 표시 방식 설정 (예: 전체 화면)
+               tabBarController.modalPresentationStyle = .fullScreen
+               self.present(tabBarController, animated: true, completion: nil)
+           }
+       }
     
 }
 extension LoginViewController {
