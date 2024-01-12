@@ -41,7 +41,7 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
         requestOptions.isSynchronous = true
         
         for asset in assets {
-            if self.images.count >= 10 {
+            if self.images.count >= 3 {
                 break // 이미 10개의 이미지가 있으므로 더 이상 이미지를 추가하지 않습니다.
             }
             
@@ -59,7 +59,7 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
     @objc func imageTapped(_ sender: UIButton) {
         let imagePicker = ImagePickerController()
         
-        let remainingSelections = 10 - self.images.count // 이미 선택한 이미지의 개수를 고려하여 남은 선택 가능한 이미지의 개수를 계산
+        let remainingSelections = 3 - self.images.count // 이미 선택한 이미지의 개수를 고려하여 남은 선택 가능한 이미지의 개수를 계산
         imagePicker.settings.selection.max = remainingSelections // 남은 선택 가능한 이미지의 개수로 최대 선택 개수를 설정
         
         imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
@@ -89,12 +89,13 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
         collectionView.allowsMultipleSelection = true
         
         cell.configure(images: images)
-        cell.countLabel.text = "\(images.count)/10"
+        cell.countLabel.text = "\(images.count)/3"
         cell.didTapCloseButton = { [weak self] index in
             guard let self = self else { return }
             self.images.remove(at: index)
             cell.configure(images:self.images)
-            cell.countLabel.text = "\(self.images.count)/10"
+            cell.countLabel.text = "\(self.images.count)/3"
+            
         }
         return cell
     }

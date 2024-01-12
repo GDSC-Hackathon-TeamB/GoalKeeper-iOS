@@ -61,7 +61,7 @@ class PhotoCVC: UICollectionViewCell {
 
     
     lazy var countLabel = UILabel().then {
-        $0.text = "0/10"
+        $0.text = "0/3"
         $0.textColor = UIColor(named: "gray400")
         $0.textAlignment = .center
         $0.font =  UIFont(name: "Pretendard-Medium", size: 14)
@@ -97,6 +97,8 @@ class PhotoCVC: UICollectionViewCell {
         
         containerView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+            $0.size.equalTo(CGSize(width: 600, height: 120))
+
         }
         
         stackView.snp.makeConstraints {
@@ -110,6 +112,8 @@ class PhotoCVC: UICollectionViewCell {
         
         countLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
+            $0.size.equalTo(CGSize(width: 45, height: 75))
+
         }
         
         layout()
