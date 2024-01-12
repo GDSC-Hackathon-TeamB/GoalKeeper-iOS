@@ -46,6 +46,18 @@ class UserInfoViewController: UIViewController {
         $0.backgroundColor = UIColor(red: 0.954, green: 0.954, blue: 0.954, alpha: 1)
     }
     
+    let myGoalLabel = UILabel().then {
+        $0.text = "나의 다짐"
+        $0.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        $0.textColor = .black
+    }
+ 
+    let noGoalLabel = UILabel().then {
+        $0.text = "아직 다짐을 설정하지 않았어요!"
+        $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        $0.textColor = .gray
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,6 +68,8 @@ class UserInfoViewController: UIViewController {
         layoutConstraints()
         
         buttonActions()
+        
+        noGoalLabel.isHidden = true
     }
     
     func setNavigationBar() {
@@ -83,6 +97,9 @@ extension UserInfoViewController {
         view.addSubview(idLabel)
         view.addSubview(id)
         view.addSubview(grayLine2)
+        
+        view.addSubview(myGoalLabel)
+        view.addSubview(noGoalLabel)
     }
     
     func layoutConstraints() {
@@ -116,6 +133,15 @@ extension UserInfoViewController {
             make.width.equalTo(view.snp.width).offset(-50)
             make.top.equalTo(id.snp.bottom).offset(8)
             make.centerX.equalTo(view.snp.centerX)
+        }
+        
+        myGoalLabel.snp.makeConstraints { make in
+            make.top.equalTo(grayLine2.snp.top).offset(40)
+            make.leading.equalTo(safeArea.snp.leading).offset(25)
+        }
+        noGoalLabel.snp.makeConstraints { make in
+            make.top.equalTo(myGoalLabel.snp.bottom).offset(10)
+            make.leading.equalTo(safeArea.snp.leading).offset(25)
         }
     }
 }
