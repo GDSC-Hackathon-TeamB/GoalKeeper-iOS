@@ -23,6 +23,7 @@
 		7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D75C2B51672F007BAF9C /* PersonalViewController.swift */; };
 		7835D75F2B51673F007BAF9C /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D75E2B51673F007BAF9C /* Personal.storyboard */; };
 		7835D7612B516746007BAF9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D7602B516746007BAF9C /* Profile.storyboard */; };
+		78E193FF2B5171B300128361 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E193FE2B5171B300128361 /* LookinServer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E193FF2B5171B300128361 /* LookinServer in Frameworks */,
 				233E9F5E2B51702000192B24 /* Then in Frameworks */,
 				233E9F662B5170B500192B24 /* Alamofire in Frameworks */,
 				233E9F612B51704D00192B24 /* SnapKit in Frameworks */,
@@ -164,6 +166,7 @@
 				233E9F602B51704D00192B24 /* SnapKit */,
 				233E9F622B51704D00192B24 /* SnapKit-Dynamic */,
 				233E9F652B5170B500192B24 /* Alamofire */,
+				78E193FE2B5171B300128361 /* LookinServer */,
 			);
 			productName = "GoalKeeper-iOS";
 			productReference = 7835D7322B515B11007BAF9C /* GoalKeeper-iOS.app */;
@@ -197,6 +200,7 @@
 				233E9F5C2B51702000192B24 /* XCRemoteSwiftPackageReference "Then" */,
 				233E9F5F2B51704D00192B24 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				233E9F642B5170B500192B24 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				78E193FD2B5171B300128361 /* XCRemoteSwiftPackageReference "LookinServer" */,
 			);
 			productRefGroup = 7835D7332B515B11007BAF9C /* Products */;
 			projectDirPath = "";
@@ -482,6 +486,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		78E193FD2B5171B300128361 /* XCRemoteSwiftPackageReference "LookinServer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QMUI/LookinServer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -504,6 +516,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 233E9F642B5170B500192B24 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		78E193FE2B5171B300128361 /* LookinServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78E193FD2B5171B300128361 /* XCRemoteSwiftPackageReference "LookinServer" */;
+			productName = LookinServer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
