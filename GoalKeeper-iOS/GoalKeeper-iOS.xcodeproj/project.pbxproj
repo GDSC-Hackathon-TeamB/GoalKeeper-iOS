@@ -12,6 +12,7 @@
 		233E9F662B5170B500192B24 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F652B5170B500192B24 /* Alamofire */; };
 		233E9F6C2B51980200192B24 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E9F6B2B51980200192B24 /* UserInfoViewController.swift */; };
 		233E9F6E2B51A70900192B24 /* MyBadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E9F6D2B51A70900192B24 /* MyBadgeViewController.swift */; };
+		233E9F702B51ADDB00192B24 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E9F6F2B51ADDB00192B24 /* SetGoalViewController.swift */; };
 		7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D7352B515B11007BAF9C /* AppDelegate.swift */; };
 		7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D7372B515B11007BAF9C /* SceneDelegate.swift */; };
 		7835D73A2B515B11007BAF9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D7392B515B11007BAF9C /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		233E9F6B2B51980200192B24 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		233E9F6D2B51A70900192B24 /* MyBadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgeViewController.swift; sourceTree = "<group>"; };
+		233E9F6F2B51ADDB00192B24 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
 		7835D7322B515B11007BAF9C /* GoalKeeper-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoalKeeper-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7835D7352B515B11007BAF9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7835D7372B515B11007BAF9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				7835D75C2B51672F007BAF9C /* PersonalViewController.swift */,
 				7835D75E2B51673F007BAF9C /* Personal.storyboard */,
+				233E9F6F2B51ADDB00192B24 /* SetGoalViewController.swift */,
 			);
 			path = personal;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				7835D74B2B516067007BAF9C /* GroupViewController.swift in Sources */,
 				233E9F6C2B51980200192B24 /* UserInfoViewController.swift in Sources */,
 				7835D73A2B515B11007BAF9C /* ViewController.swift in Sources */,
+				233E9F702B51ADDB00192B24 /* SetGoalViewController.swift in Sources */,
 				78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */,
 				7835D75B2B516726007BAF9C /* ProfileViewController.swift in Sources */,
 				7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */,
