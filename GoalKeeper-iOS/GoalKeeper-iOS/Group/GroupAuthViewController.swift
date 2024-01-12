@@ -13,44 +13,18 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
 
     
     @IBOutlet weak var registerPhoto: UICollectionView!
-    
-    @IBOutlet weak var goToKakaoVIew: UIView!
-    
-    @IBOutlet weak var RuleView: UIView!
-    
-    @IBOutlet weak var RuleLabel: UILabel!
-    
-    
-    @IBOutlet weak var groupAuth: UILabel!
-    
 
     var images:[UIImage] = []
     var selectedIndexPaths: [IndexPath] = []
 
 
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionViews()
         
-        goToKakaoVIew.layer.cornerRadius = 12
-        RuleView.layer.cornerRadius = 12
         
-        
-        // RuleLabel에 탭 제스처 인식기 추가
-               let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ruleLabelTapped))
-               RuleLabel.addGestureRecognizer(tapGesture)
-               RuleLabel.isUserInteractionEnabled = true
-        
-        // UITapGestureRecognizer 추가
-               let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-               groupAuth.isUserInteractionEnabled = true
-               groupAuth.addGestureRecognizer(tapGesture2)
-           
     }
-    
     
     
     //MARK: - 사진 선택
@@ -145,46 +119,6 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
         }
     }
     
-    
-    //MARK: -탭 제스쳐
-
-    @objc func ruleLabelTapped() {
-        // Alert 컨트롤러 생성
-        let alertController = UIAlertController(title: "규칙 입력", message: "규칙을 입력하세요", preferredStyle: .alert)
-        
-        // 텍스트 필드 추가
-        alertController.addTextField { textField in
-            textField.placeholder = "규칙을 입력하세요"
-            textField.text = self.RuleLabel.text  // 기존 텍스트를 텍스트 필드에 설정
-        }
-        
-        // 확인 액션 추가
-        let confirmAction = UIAlertAction(title: "확인", style: .default) { [weak self] _ in
-            if let textField = alertController.textFields?.first, let text = textField.text {
-                // RuleLabel 텍스트 업데이트
-                self?.RuleLabel.text = text
-            }
-        }
-        
-        // 취소 액션 추가
-        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
-        
-        alertController.addAction(confirmAction)
-        alertController.addAction(cancelAction)
-        
-        // Alert 컨트롤러 표시
-        present(alertController, animated: true, completion: nil)
-    }
-
-    @objc func handleTap() {
-           // RewardPopUp 인스턴스화 및 설정
-           let rewardPopUpVC = RewardPopUp()
-           rewardPopUpVC.modalPresentationStyle = .overFullScreen // 풀스크린이 아닌 모달 스타일
-           rewardPopUpVC.modalTransitionStyle = .crossDissolve // 부드러운 전환 효과
-
-           // 모달로 표시
-           present(rewardPopUpVC, animated: true, completion: nil)
-       }
     
     
 }
