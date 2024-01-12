@@ -15,6 +15,10 @@
 		7835D7422B515B12007BAF9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D7402B515B12007BAF9C /* LaunchScreen.storyboard */; };
 		7835D74B2B516067007BAF9C /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D74A2B516067007BAF9C /* GroupViewController.swift */; };
 		7835D74D2B5160DA007BAF9C /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D74C2B5160DA007BAF9C /* Group.storyboard */; };
+		7835D75B2B516726007BAF9C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D75A2B516726007BAF9C /* ProfileViewController.swift */; };
+		7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D75C2B51672F007BAF9C /* PersonalViewController.swift */; };
+		7835D75F2B51673F007BAF9C /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D75E2B51673F007BAF9C /* Personal.storyboard */; };
+		7835D7612B516746007BAF9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D7602B516746007BAF9C /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		7835D7552B5161B1007BAF9C /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		7835D7562B5161B1007BAF9C /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		7835D7572B5161B1007BAF9C /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		7835D75A2B516726007BAF9C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7835D75C2B51672F007BAF9C /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		7835D75E2B51673F007BAF9C /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
+		7835D7602B516746007BAF9C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 		7835D7292B515B11007BAF9C = {
 			isa = PBXGroup;
 			children = (
+				7835D74E2B516197007BAF9C /* Font */,
 				7835D7342B515B11007BAF9C /* GoalKeeper-iOS */,
 				7835D7332B515B11007BAF9C /* Products */,
 			);
@@ -69,7 +78,8 @@
 		7835D7342B515B11007BAF9C /* GoalKeeper-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7835D74E2B516197007BAF9C /* Font */,
+				7835D7592B516712007BAF9C /* Profile */,
+				7835D7582B516608007BAF9C /* personal */,
 				7835D7492B51604D007BAF9C /* Group */,
 				7835D7352B515B11007BAF9C /* AppDelegate.swift */,
 				7835D7372B515B11007BAF9C /* SceneDelegate.swift */,
@@ -105,6 +115,24 @@
 				7835D7572B5161B1007BAF9C /* Pretendard-Thin.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		7835D7582B516608007BAF9C /* personal */ = {
+			isa = PBXGroup;
+			children = (
+				7835D75C2B51672F007BAF9C /* PersonalViewController.swift */,
+				7835D75E2B51673F007BAF9C /* Personal.storyboard */,
+			);
+			path = personal;
+			sourceTree = "<group>";
+		};
+		7835D7592B516712007BAF9C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7835D75A2B516726007BAF9C /* ProfileViewController.swift */,
+				7835D7602B516746007BAF9C /* Profile.storyboard */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7835D7612B516746007BAF9C /* Profile.storyboard in Resources */,
 				7835D74D2B5160DA007BAF9C /* Group.storyboard in Resources */,
+				7835D75F2B51673F007BAF9C /* Personal.storyboard in Resources */,
 				7835D7422B515B12007BAF9C /* LaunchScreen.storyboard in Resources */,
 				7835D73F2B515B12007BAF9C /* Assets.xcassets in Resources */,
 				7835D73D2B515B11007BAF9C /* Main.storyboard in Resources */,
@@ -181,7 +211,9 @@
 			files = (
 				7835D74B2B516067007BAF9C /* GroupViewController.swift in Sources */,
 				7835D73A2B515B11007BAF9C /* ViewController.swift in Sources */,
+				7835D75B2B516726007BAF9C /* ProfileViewController.swift in Sources */,
 				7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */,
+				7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */,
 				7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
