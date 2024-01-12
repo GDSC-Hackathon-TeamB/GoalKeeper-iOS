@@ -35,6 +35,11 @@ class LoginViewController: UIViewController {
         $0.backgroundColor = UIColor(red: 0.875, green: 0.875, blue: 0.875, alpha: 1)
     }
     
+    let showPWImage = UIButton().then {
+        $0.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        $0.tintColor = UIColor(red: 0.875, green: 0.875, blue: 0.875, alpha: 1)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,12 +55,12 @@ extension LoginViewController {
         view.addSubview(idTextField)
         view.addSubview(divider)
         view.addSubview(pwTextField)
+        view.addSubview(showPWImage)
         view.addSubview(divider2)
         view.addSubview(loginButton)
     }
     
     func layoutConstraints() {
-        let safeArea = view.safeAreaLayoutGuide
         let screenWidth = UIScreen.main.bounds.size.width
         
         idTextField.snp.makeConstraints { make in
@@ -75,6 +80,11 @@ extension LoginViewController {
             make.height.equalTo(30)
             make.centerX.equalTo(view.snp.centerX)
             make.top.equalTo(divider.snp.bottom).offset(20)
+        }
+        showPWImage.snp.makeConstraints { make in
+            make.height.equalTo(20)
+            make.centerY.equalTo(pwTextField.snp.centerY)
+            make.trailing.equalTo(pwTextField.snp.trailing)
         }
         divider2.snp.makeConstraints { make in
             make.height.equalTo(1.5)
