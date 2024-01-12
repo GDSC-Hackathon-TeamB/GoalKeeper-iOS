@@ -86,7 +86,8 @@ class SetGoalViewController: UIViewController, UITextViewDelegate {
         // 매칭하기 버튼 클릭 시
         // TODO: api 연결
         
-        navigationController?.popViewController(animated: true)
+        let nextVC = ShowMatchingTimeViewController()
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func textViewDidChange(_ textView: UITextView) {

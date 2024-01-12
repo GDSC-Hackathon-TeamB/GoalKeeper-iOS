@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     }
     
     // 닉네임
-    lazy var nicknameView = arrowView(title: "닉네임", labelFont: UIFont.systemFont(ofSize: 20, weight: .bold))
+    lazy var nicknameView = arrowView(title: "골키퍼", labelFont: UIFont.systemFont(ofSize: 20, weight: .bold))
     
     // 구분선
     let divider = UIView().then {

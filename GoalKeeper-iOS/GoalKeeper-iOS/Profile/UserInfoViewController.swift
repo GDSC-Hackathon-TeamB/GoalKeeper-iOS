@@ -23,7 +23,7 @@ class UserInfoViewController: UIViewController {
     }
     
     let nickname = UILabel().then {
-        $0.text = "nicknick"
+        $0.text = "골키퍼"
         $0.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         $0.textColor = .black
     }
@@ -39,7 +39,7 @@ class UserInfoViewController: UIViewController {
     }
     
     let id = UILabel().then {
-        $0.text = "idid@gmail.com"
+        $0.text = "goalKeeper@gmail.com"
         $0.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         $0.textColor = .black
     }
