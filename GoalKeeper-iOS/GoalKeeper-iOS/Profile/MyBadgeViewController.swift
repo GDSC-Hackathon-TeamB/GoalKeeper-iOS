@@ -20,6 +20,19 @@ class MyBadgeViewController: UIViewController {
         $0.textColor = .black
     }
     
+    let badge1 = UIImageView().then {
+        $0.image = UIImage(named: "badge1")
+    }
+    let badge2 = UIImageView().then {
+        $0.image = UIImage(named: "badge2")
+    }
+    let badge3 = UIImageView().then {
+        $0.image = UIImage(named: "badge3")
+    }
+    let badge4 = UIImageView().then {
+        $0.image = UIImage(named: "badge4")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +43,6 @@ class MyBadgeViewController: UIViewController {
         layoutConstraints()
         
         buttonActions()
-        
     }
     
     func setNavigationBar() {
@@ -52,6 +64,10 @@ class MyBadgeViewController: UIViewController {
 extension MyBadgeViewController {
     func addView() {
         view.addSubview(badgeNumLabel)
+        view.addSubview(badge1)
+        view.addSubview(badge2)
+        view.addSubview(badge3)
+        view.addSubview(badge4)
     }
     
     func layoutConstraints() {
@@ -60,6 +76,27 @@ extension MyBadgeViewController {
         badgeNumLabel.snp.makeConstraints { make in
             make.top.equalTo(safeArea.snp.top).offset(20)
             make.centerX.equalTo(view.snp.centerX)
+        }
+        
+        badge1.snp.makeConstraints { make in
+            make.height.width.equalTo(40)
+            make.leading.equalTo(safeArea.snp.leading).offset(30)
+            make.top.equalTo(badgeNumLabel.snp.bottom).offset(50)
+        }
+        badge2.snp.makeConstraints { make in
+            make.height.width.equalTo(40)
+            make.leading.equalTo(badge1.snp.trailing).offset(30)
+            make.top.equalTo(badgeNumLabel.snp.bottom).offset(50)
+        }
+        badge3.snp.makeConstraints { make in
+            make.height.width.equalTo(40)
+            make.leading.equalTo(badge2.snp.trailing).offset(30)
+            make.top.equalTo(badgeNumLabel.snp.bottom).offset(50)
+        }
+        badge4.snp.makeConstraints { make in
+            make.height.width.equalTo(40)
+            make.leading.equalTo(badge3.snp.trailing).offset(30)
+            make.top.equalTo(badgeNumLabel.snp.bottom).offset(50)
         }
     }
 }
