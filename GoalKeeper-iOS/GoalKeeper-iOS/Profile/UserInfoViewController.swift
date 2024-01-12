@@ -77,6 +77,12 @@ class UserInfoViewController: UIViewController {
         $0.textAlignment = .center
     }
     
+    let logOutButton = UIButton().then {
+        $0.setTitle("로그아웃", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -121,6 +127,8 @@ extension UserInfoViewController {
         view.addSubview(noGoalLabel)
         view.addSubview(neighborGoal)
         view.addSubview(personalGoal)
+        
+        view.addSubview(logOutButton)
     }
     
     func layoutConstraints() {
@@ -175,6 +183,11 @@ extension UserInfoViewController {
             make.width.height.equalTo(screenWidth*0.35)
             make.top.equalTo(myGoalLabel.snp.bottom).offset(28)
             make.trailing.equalTo(safeArea.snp.trailing).offset(-40)
+        }
+        
+        logOutButton.snp.makeConstraints { make in
+            make.bottom.equalTo(safeArea.snp.bottom).offset(-10)
+            make.centerX.equalTo(view.snp.centerX)
         }
     }
 }
