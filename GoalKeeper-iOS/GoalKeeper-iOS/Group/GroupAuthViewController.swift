@@ -21,6 +21,7 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var RuleLabel: UILabel!
     
     
+    @IBOutlet weak var groupAuth: UILabel!
     
 
     var images:[UIImage] = []

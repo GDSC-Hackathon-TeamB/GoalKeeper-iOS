@@ -336,6 +336,13 @@
                                     <constraint firstAttribute="height" constant="176" id="Oht-em-Npc"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="인증하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7M-i4-GD8">
+                                <rect key="frame" x="318" y="252" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YHG-yg-oVg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -359,6 +366,7 @@
                         <outlet property="RuleLabel" destination="3ei-W5-xBS" id="x7N-4P-Yid"/>
                         <outlet property="RuleView" destination="ESo-hb-O5u" id="ynd-x2-6fa"/>
                         <outlet property="goToKakaoVIew" destination="p2m-h5-kQ3" id="3ey-Yh-Sel"/>
+                        <outlet property="groupAuth" destination="U7M-i4-GD8" id="fi7-V3-b2n"/>
                         <outlet property="registerPhoto" destination="OXn-dk-IVl" id="Q0n-VZ-UIu"/>
                     </connections>
                 </viewController>
