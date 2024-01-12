@@ -30,6 +30,22 @@ class UserInfoViewController: UIViewController {
         $0.backgroundColor = UIColor(red: 0.954, green: 0.954, blue: 0.954, alpha: 1)
     }
     
+    let idLabel = UILabel().then {
+        $0.text = "ID"
+        $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        $0.textColor = .gray
+    }
+    
+    let id = UILabel().then {
+        $0.text = "idid@gmail.com"
+        $0.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        $0.textColor = .black
+    }
+    
+    let grayLine2 = UIView().then {
+        $0.backgroundColor = UIColor(red: 0.954, green: 0.954, blue: 0.954, alpha: 1)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,6 +79,10 @@ extension UserInfoViewController {
         view.addSubview(nicknameLabel)
         view.addSubview(nickname)
         view.addSubview(grayLine1)
+        
+        view.addSubview(idLabel)
+        view.addSubview(id)
+        view.addSubview(grayLine2)
     }
     
     func layoutConstraints() {
@@ -80,6 +100,21 @@ extension UserInfoViewController {
             make.height.equalTo(1.5)
             make.width.equalTo(view.snp.width).offset(-50)
             make.top.equalTo(nickname.snp.bottom).offset(8)
+            make.centerX.equalTo(view.snp.centerX)
+        }
+        
+        idLabel.snp.makeConstraints { make in
+            make.top.equalTo(grayLine1.snp.bottom).offset(20)
+            make.leading.equalTo(safeArea.snp.leading).offset(25)
+        }
+        id.snp.makeConstraints { make in
+            make.top.equalTo(idLabel.snp.bottom).offset(10)
+            make.leading.equalTo(safeArea.snp.leading).offset(25)
+        }
+        grayLine2.snp.makeConstraints { make in
+            make.height.equalTo(1.5)
+            make.width.equalTo(view.snp.width).offset(-50)
+            make.top.equalTo(id.snp.bottom).offset(8)
             make.centerX.equalTo(view.snp.centerX)
         }
     }
