@@ -26,6 +26,17 @@ class SetGoalViewController: UIViewController {
         $0.textColor = .black
     }
     
+    let textView = UITextView().then {
+        $0.isScrollEnabled = false
+        $0.tintColor = .black
+        $0.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
+        $0.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        $0.layer.borderWidth = 0.7
+        $0.textContainerInset = UIEdgeInsets(top: 25, left: 15, bottom: 25, right: 15)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +47,6 @@ class SetGoalViewController: UIViewController {
         layoutConstraints()
         
         buttonActions()
-        
     }
     
     func setNavigationBar() {
@@ -59,10 +69,12 @@ extension SetGoalViewController {
     func addView() {
         view.addSubview(setGoalTitle)
         view.addSubview(setGoalSubtitle)
+        view.addSubview(textView)
     }
     
     func layoutConstraints() {
         let safeArea = view.safeAreaLayoutGuide
+        let screenWidth = UIScreen.main.bounds.size.width
         
         setGoalTitle.snp.makeConstraints { make in
             make.top.equalTo(safeArea.snp.top).offset(130)
@@ -70,6 +82,12 @@ extension SetGoalViewController {
         }
         setGoalSubtitle.snp.makeConstraints { make in
             make.top.equalTo(setGoalTitle.snp.bottom).offset(5)
+            make.centerX.equalTo(view.snp.centerX)
+        }
+        textView.snp.makeConstraints { make in
+            make.height.equalTo(170)
+            make.width.equalTo(screenWidth*0.85)
+            make.top.equalTo(setGoalSubtitle.snp.bottom).offset(35)
             make.centerX.equalTo(view.snp.centerX)
         }
     }
