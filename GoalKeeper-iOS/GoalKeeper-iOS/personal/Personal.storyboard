@@ -66,15 +66,6 @@
                                     <constraint firstItem="fUj-Yi-t0x" firstAttribute="top" secondItem="vdd-SL-or8" secondAttribute="top" id="wtN-KZ-gRs"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbb-Jv-FWf">
-                                <rect key="frame" x="191" y="546" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="gotest:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EpW-W2-0Eg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
