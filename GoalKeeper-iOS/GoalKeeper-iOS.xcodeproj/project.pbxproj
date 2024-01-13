@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2327BDCB2B52098D005C915A /* RewardPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327BDCA2B52098D005C915A /* RewardPopUp.swift */; };
+		2327BDCD2B52099B005C915A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327BDCC2B52099B005C915A /* LoginViewController.swift */; };
 		233E9F5E2B51702000192B24 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F5D2B51702000192B24 /* Then */; };
 		233E9F612B51704D00192B24 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F602B51704D00192B24 /* SnapKit */; };
 		233E9F662B5170B500192B24 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 233E9F652B5170B500192B24 /* Alamofire */; };
@@ -26,9 +28,6 @@
 		7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835D75C2B51672F007BAF9C /* PersonalViewController.swift */; };
 		7835D75F2B51673F007BAF9C /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D75E2B51673F007BAF9C /* Personal.storyboard */; };
 		7835D7612B516746007BAF9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7835D7602B516746007BAF9C /* Profile.storyboard */; };
-		7864F5EB2B51EB3E00766584 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7864F5EA2B51EB3E00766584 /* LoginPageViewController.swift */; };
-		7864F5ED2B51ECE000766584 /* RewardPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7864F5EC2B51ECE000766584 /* RewardPopUp.swift */; };
-		7864F5EF2B51EE7E00766584 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7864F5EE2B51EE7E00766584 /* LoginViewController.swift */; };
 		787680472B51FD74004239D1 /* PersonalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787680462B51FD74004239D1 /* PersonalCollectionViewController.swift */; };
 		7876B45F2B51BB4900F5B128 /* SelectGoalPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876B45E2B51BB4900F5B128 /* SelectGoalPersonalViewController.swift */; };
 		78E193FF2B5171B300128361 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E193FE2B5171B300128361 /* LookinServer */; };
@@ -39,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2327BDCA2B52098D005C915A /* RewardPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardPopUp.swift; sourceTree = "<group>"; };
+		2327BDCC2B52099B005C915A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Auth/LoginViewController.swift; sourceTree = "<group>"; };
 		233E9F6B2B51980200192B24 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		233E9F6D2B51A70900192B24 /* MyBadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgeViewController.swift; sourceTree = "<group>"; };
 		233E9F6F2B51ADDB00192B24 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
@@ -66,9 +67,6 @@
 		7835D75C2B51672F007BAF9C /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		7835D75E2B51673F007BAF9C /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
 		7835D7602B516746007BAF9C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		7864F5EA2B51EB3E00766584 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
-		7864F5EC2B51ECE000766584 /* RewardPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardPopUp.swift; path = "../../../../../Downloads/GoalKeeper-iOS-b14fa975aa11b6318a9dcda63d37cd1fa2167b44/GoalKeeper-iOS/GoalKeeper-iOS/RewardPopUp.swift"; sourceTree = "<group>"; };
-		7864F5EE2B51EE7E00766584 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		787680462B51FD74004239D1 /* PersonalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCollectionViewController.swift; sourceTree = "<group>"; };
 		7876B45E2B51BB4900F5B128 /* SelectGoalPersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalPersonalViewController.swift; sourceTree = "<group>"; };
 		78E194002B5173E600128361 /* GroupAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAuthViewController.swift; sourceTree = "<group>"; };
@@ -112,16 +110,15 @@
 		7835D7342B515B11007BAF9C /* GoalKeeper-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2327BDCC2B52099B005C915A /* LoginViewController.swift */,
+				2327BDCA2B52098D005C915A /* RewardPopUp.swift */,
 				7835D7592B516712007BAF9C /* Profile */,
 				7835D7582B516608007BAF9C /* personal */,
 				7835D7492B51604D007BAF9C /* Group */,
 				7835D7352B515B11007BAF9C /* AppDelegate.swift */,
-				7864F5EE2B51EE7E00766584 /* LoginViewController.swift */,
 				7835D7372B515B11007BAF9C /* SceneDelegate.swift */,
 				7835D7392B515B11007BAF9C /* ViewController.swift */,
 				7835D73B2B515B11007BAF9C /* Main.storyboard */,
-				7864F5EA2B51EB3E00766584 /* LoginPageViewController.swift */,
-				7864F5EC2B51ECE000766584 /* RewardPopUp.swift */,
 				7835D73E2B515B12007BAF9C /* Assets.xcassets */,
 				7835D7402B515B12007BAF9C /* LaunchScreen.storyboard */,
 				7835D7432B515B12007BAF9C /* Info.plist */,
@@ -274,17 +271,16 @@
 				233E9F6C2B51980200192B24 /* UserInfoViewController.swift in Sources */,
 				7876B45F2B51BB4900F5B128 /* SelectGoalPersonalViewController.swift in Sources */,
 				7835D73A2B515B11007BAF9C /* ViewController.swift in Sources */,
-				7864F5ED2B51ECE000766584 /* RewardPopUp.swift in Sources */,
 				787680472B51FD74004239D1 /* PersonalCollectionViewController.swift in Sources */,
 				233E9F702B51ADDB00192B24 /* SetGoalViewController.swift in Sources */,
+				2327BDCD2B52099B005C915A /* LoginViewController.swift in Sources */,
 				233E9F722B51C93C00192B24 /* ShowMatchingTimeViewController.swift in Sources */,
 				78E194012B5173E600128361 /* GroupAuthViewController.swift in Sources */,
 				7835D75B2B516726007BAF9C /* ProfileViewController.swift in Sources */,
 				7835D7362B515B11007BAF9C /* AppDelegate.swift in Sources */,
 				7835D75D2B51672F007BAF9C /* PersonalViewController.swift in Sources */,
 				78FEBE492B51AC5B0094A4F0 /* SelectGoalViewController.swift in Sources */,
-				7864F5EF2B51EE7E00766584 /* LoginViewController.swift in Sources */,
-				7864F5EB2B51EB3E00766584 /* LoginPageViewController.swift in Sources */,
+				2327BDCB2B52098D005C915A /* RewardPopUp.swift in Sources */,
 				7835D7382B515B11007BAF9C /* SceneDelegate.swift in Sources */,
 				78FEBE442B51982F0094A4F0 /* PhotoCVC.swift in Sources */,
 			);

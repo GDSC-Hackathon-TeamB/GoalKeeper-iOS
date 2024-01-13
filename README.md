@@ -1,2 +1,0 @@
-# GoalKeeper
-GDSC Newyear hackton

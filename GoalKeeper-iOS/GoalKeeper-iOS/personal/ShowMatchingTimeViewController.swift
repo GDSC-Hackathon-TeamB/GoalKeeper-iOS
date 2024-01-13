@@ -37,6 +37,7 @@ class ShowMatchingTimeViewController: UIViewController {
         $0.clipsToBounds = true
     }
     
+<<<<<<< Updated upstream
     let nextButton1 = UIButton().then {
         $0.setTitle("매칭화면으로", for: .normal)
         $0.setTitleColor(.black, for: .normal)
@@ -45,6 +46,10 @@ class ShowMatchingTimeViewController: UIViewController {
 
     let nextButton2 = UIButton().then {
         $0.setTitle("가기(임시)", for: .normal)
+=======
+    let nextButton = UIButton().then {
+        $0.setTitle("매칭화면으로 가기(임시)", for: .normal)
+>>>>>>> Stashed changes
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
     }
@@ -62,8 +67,12 @@ class ShowMatchingTimeViewController: UIViewController {
         layoutConstraints()
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+<<<<<<< Updated upstream
         nextButton1.addTarget(self, action: #selector(showNextVC), for: .touchUpInside)
         nextButton2.addTarget(self, action: #selector(showNextVC2), for: .touchUpInside)
+=======
+        nextButton.addTarget(self, action: #selector(showNextVC), for: .touchUpInside)
+>>>>>>> Stashed changes
     }
     
     @objc func updateTime() {
@@ -96,6 +105,7 @@ class ShowMatchingTimeViewController: UIViewController {
     }
     
     @objc func showNextVC(_ sender: UIView) {
+<<<<<<< Updated upstream
         let storyboard = UIStoryboard(name: "Group", bundle: nil)
         if let groupAuthVC = storyboard.instantiateViewController(withIdentifier: "GroupAuthViewController") as? GroupAuthViewController {
             navigationController?.pushViewController(groupAuthVC, animated: true)
@@ -105,6 +115,8 @@ class ShowMatchingTimeViewController: UIViewController {
     }
     
     @objc func showNextVC2(_ sender: UIView) {
+=======
+>>>>>>> Stashed changes
         let storyboard = UIStoryboard(name: "Personal", bundle: nil)
         if let groupAuthVC = storyboard.instantiateViewController(withIdentifier: "PersonalCollectionViewController") as? PersonalCollectionViewController {
             navigationController?.pushViewController(groupAuthVC, animated: true)
@@ -112,6 +124,11 @@ class ShowMatchingTimeViewController: UIViewController {
             print("GroupAuthViewController를 찾을 수 없습니다.")
         }
     }
+<<<<<<< Updated upstream
+=======
+
+ //   PersonalCollectionViewController
+>>>>>>> Stashed changes
     
     deinit {
         // 타이머 정리
@@ -126,8 +143,12 @@ extension ShowMatchingTimeViewController {
         view.addSubview(label2)
         view.addSubview(time)
         view.addSubview(cancelMatchingButton)
+<<<<<<< Updated upstream
         view.addSubview(nextButton1)
         view.addSubview(nextButton2)
+=======
+        view.addSubview(nextButton)
+>>>>>>> Stashed changes
     }
     
     func layoutConstraints() {
@@ -151,6 +172,7 @@ extension ShowMatchingTimeViewController {
             make.centerX.equalTo(view.snp.centerX)
             make.top.equalTo(time.snp.bottom).offset(60)
         }
+<<<<<<< Updated upstream
         nextButton1.snp.makeConstraints { make in
             make.top.equalTo(cancelMatchingButton.snp.bottom).offset(50)
             make.leading.equalTo(safeArea.snp.leading).offset(90)
@@ -158,6 +180,11 @@ extension ShowMatchingTimeViewController {
         nextButton2.snp.makeConstraints { make in
             make.centerY.equalTo(nextButton1.snp.centerY)
             make.leading.equalTo(nextButton1.snp.trailing).offset(7)
+=======
+        nextButton.snp.makeConstraints { make in
+            make.top.equalTo(cancelMatchingButton.snp.bottom).offset(50)
+            make.centerX.equalTo(view.snp.centerX)
+>>>>>>> Stashed changes
         }
     }
 }

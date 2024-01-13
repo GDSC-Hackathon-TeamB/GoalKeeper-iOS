@@ -55,9 +55,9 @@ class GroupAuthViewController: UIViewController, UICollectionViewDelegate, UICol
     
     //MARK: - 사진 선택
     private func setupCollectionViews() {
-        registerPhoto.dataSource = self
-        registerPhoto.delegate = self
-        registerPhoto.register(PhotoCVC.self, forCellWithReuseIdentifier: PhotoCVC.identifier)
+        registerPhoto?.dataSource = self
+        registerPhoto?.delegate = self
+        registerPhoto?.register(PhotoCVC.self, forCellWithReuseIdentifier: PhotoCVC.identifier)
     }
     
     //이미지 갯수 제한
